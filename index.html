@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Köböl 2026 B osztály órarend" />
+  <title>Köböl 2026 B Osztály — Órarend</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--bg:#0b1020;--panel:#121a32;--panel2:#182240;--line:rgba(148,163,184,.16);--text:#e8eefc;--muted:#aab6d3;--accent:#5eead4;--accent2:#60a5fa;--shadow:0 24px 60px rgba(0,0,0,.35);--radius:22px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{min-height:100vh;font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--text);background:radial-gradient(900px 500px at 10% -10%,rgba(94,234,212,.16),transparent 50%),radial-gradient(700px 420px at 100% 0%,rgba(96,165,250,.18),transparent 45%),var(--bg)}
+    .wrap{width:min(1280px,calc(100% - 32px));margin:32px auto 48px}
+    header{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:28px}
+    .brand{display:flex;align-items:center;gap:14px}.mark{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;font-weight:700;font-size:1.05rem;color:#06201c;box-shadow:0 10px 24px rgba(94,234,212,.25)}
+    h1{font-size:clamp(1.45rem,4vw,2rem);letter-spacing:-.03em}.sub{color:var(--muted);margin-top:4px;font-size:1rem}.week-label{padding:9px 13px;border:1px solid rgba(94,234,212,.28);border-radius:999px;color:var(--accent);font-size:.9rem;font-weight:600;white-space:nowrap}
+    .panel{overflow-x:auto;background:linear-gradient(180deg,rgba(24,34,64,.92),rgba(18,26,50,.92));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    table{width:100%;min-width:930px;table-layout:fixed;border-collapse:collapse}th,td{width:16.666%;padding:15px 14px;text-align:left;vertical-align:middle;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}th:last-child,td:last-child{border-right:none}tbody tr:last-child td{border-bottom:none}th{color:var(--muted);background:rgba(11,16,32,.35);font-size:.78rem;letter-spacing:.07em;text-transform:uppercase}tbody tr{transition:background .15s ease}tbody tr:hover{background:rgba(96,165,250,.06)}
+    .period{font-family:"IBM Plex Mono",ui-monospace,monospace;color:var(--accent);font-weight:600;font-size:1.02rem;white-space:nowrap}.lesson{min-height:28px;border-radius:9px;padding:7px 9px;background:rgba(96,165,250,.09);border:1px solid rgba(96,165,250,.13);font-weight:600;font-size:.93rem;line-height:1.25}.empty{color:#5f6d8c;padding:8px 3px;font-size:.9rem}.lunch{background:rgba(94,234,212,.08);color:var(--accent);font-weight:600}
+    .notes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}.note{min-height:162px;padding:22px;background:linear-gradient(180deg,rgba(24,34,64,.84),rgba(18,26,50,.9));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.note h2{font-size:1.05rem;letter-spacing:-.01em;margin-bottom:10px}.note p{color:var(--muted);line-height:1.55;font-size:.94rem}.note.important{border-top:3px solid var(--accent)}.note.info{border-top:3px solid var(--accent2)}footer{color:var(--muted);font-size:.82rem;margin-top:16px}
+    @media(max-width:720px){.wrap{width:min(100% - 24px,1280px);margin-top:20px}header{flex-direction:column;align-items:flex-start}.notes{grid-template-columns:1fr}.panel{border-radius:16px}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="brand"><div class="mark">K26</div><div><h1>Köböl 2026 B Osztály</h1><p class="sub">Órarend · 1.B</p></div></div>
+      <div class="week-label">2026/2027-es tanév</div>
+    </header>
+
+    <section class="panel" aria-label="Heti órarend">
+      <table>
+        <thead><tr><th>Óra / idő</th><th>Hétfő</th><th>Kedd</th><th>Szerda</th><th>Csütörtök</th><th>Péntek</th></tr></thead>
+        <tbody>
+          <tr><td class="period">1.<br>8:00–8:45</td><td><div class="lesson">Matematika</div></td><td><div class="lesson">Matematika</div></td><td><div class="lesson">Matematika</div></td><td><div class="lesson">Matematika</div></td><td><div class="lesson">Etika/Hittan</div></td></tr>
+          <tr><td class="period">2.<br>8:55–9:40</td><td><div class="lesson">Olvasás</div></td><td><div class="lesson">Olvasás</div></td><td><div class="lesson">Olvasás</div></td><td><div class="lesson">Olvasás</div></td><td><div class="lesson">Olvasás</div></td></tr>
+          <tr><td class="period">3.<br>9:55–10:40</td><td><div class="lesson">Írás</div></td><td><div class="lesson">Írás</div></td><td><div class="lesson">Testnevelés (hoki)</div></td><td><div class="lesson">Írás</div></td><td><div class="lesson">Írás</div></td></tr>
+          <tr><td class="period">4.<br>10:55–11:40</td><td><div class="lesson">Ének</div></td><td><div class="lesson">Testnevelés</div></td><td><div class="lesson">Testnevelés (hoki)</div></td><td><div class="lesson">Ének</div></td><td><div class="lesson">Technika</div></td></tr>
+          <tr><td class="period">5.<br>12:00–12:45</td><td><div class="lesson">Testnevelés</div></td><td><span class="empty">—</span></td><td><div class="lesson">Rajz</div></td><td><div class="lesson">Rajz</div></td><td><span class="empty">—</span></td></tr>
+          <tr><td class="period">6.<br>13:05–13:45</td><td><div class="lesson">Testnevelés (jóga)</div></td><td><span class="empty">—</span></td><td><span class="empty">—</span></td><td><span class="empty">—</span></td><td><span class="empty">—</span></td></tr>
+          <tr><td class="period lunch">Ebéd</td><td class="lunch">13:45–14:05</td><td class="lunch">12:10–12:35</td><td class="lunch">13:15–13:35</td><td class="lunch">13:15–13:35</td><td class="lunch">12:45–13:05</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes" aria-label="Tájékoztatók">
+      <article class="note important"><h2>Fontos tudnivalók</h2><p>Az órarend tájékoztató jellegű. Kérjük, mindig ellenőrizzétek a tanárok által küldött aktuális üzeneteket és az esetleges változásokat.</p></article>
+      <article class="note info"><h2>További információk</h2><p>Hiányzás, programváltozás vagy kérdés esetén forduljatok az osztályfőnökhöz. Az oldalon szereplő adatok szükség szerint frissülnek.</p></article>
+    </section>
+    <footer>Köböl 2026 B Osztály · 1.B · Órarend</footer>
+  </main>
+</body>
+</html>
