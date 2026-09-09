@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
   <style>
-    :root{--bg:#0b1020;--panel:#121a32;--panel2:#182240;--line:rgba(148,163,184,.16);--text:#e8eefc;--muted:#aab6d3;--accent:#5eead4;--accent2:#60a5fa;--shadow:0 24px 60px rgba(0,0,0,.35);--radius:22px}
+    :root{--bg:#0b1020;--panel:#121a32;--panel2:#182240;--line:rgba(148,163,184,.16);--text:#e8eefc;--muted:#aab6d3;--accent:#5eead4;--accent2:#60a5fa;--accent3:#fb923c;--shadow:0 24px 60px rgba(0,0,0,.35);--radius:22px}
     *{box-sizing:border-box;margin:0;padding:0}
     body{min-height:100vh;font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--text);background:radial-gradient(900px 500px at 10% -10%,rgba(94,234,212,.16),transparent 50%),radial-gradient(700px 420px at 100% 0%,rgba(96,165,250,.18),transparent 45%),var(--bg)}
     .wrap{width:min(1280px,calc(100% - 32px));margin:32px auto 48px}
@@ -19,7 +19,7 @@
     .panel{overflow-x:auto;background:linear-gradient(180deg,rgba(24,34,64,.92),rgba(18,26,50,.92));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
     table{width:100%;min-width:930px;table-layout:fixed;border-collapse:collapse}th,td{width:16.666%;padding:15px 14px;text-align:left;vertical-align:middle;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}th:last-child,td:last-child{border-right:none}tbody tr:last-child td{border-bottom:none}th{color:var(--muted);background:rgba(11,16,32,.35);font-size:.78rem;letter-spacing:.07em;text-transform:uppercase}tbody tr{transition:background .15s ease}tbody tr:hover{background:rgba(96,165,250,.06)}
     .period{font-family:"IBM Plex Mono",ui-monospace,monospace;color:var(--accent);font-weight:600;font-size:1.02rem;white-space:nowrap}.lesson{min-height:28px;border-radius:9px;padding:7px 9px;background:rgba(96,165,250,.09);border:1px solid rgba(96,165,250,.13);font-weight:600;font-size:.93rem;line-height:1.25}.empty{color:#5f6d8c;padding:8px 3px;font-size:.9rem}.lunch{background:rgba(94,234,212,.08);color:var(--accent);font-weight:600}
-    .notes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}.note{min-height:162px;padding:22px;background:linear-gradient(180deg,rgba(24,34,64,.84),rgba(18,26,50,.9));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.note h2{font-size:1.05rem;letter-spacing:-.01em;margin-bottom:10px}.note p{color:var(--muted);line-height:1.55;font-size:.94rem}.note.important{border-top:3px solid var(--accent)}.note.info{border-top:3px solid var(--accent2)}footer{color:var(--muted);font-size:.82rem;margin-top:16px}
+    .notes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}.note{min-height:162px;padding:22px;background:linear-gradient(180deg,rgba(24,34,64,.84),rgba(18,26,50,.9));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.note h2{font-size:1.05rem;letter-spacing:-.01em;margin-bottom:10px}.note p{color:var(--muted);line-height:1.55;font-size:.94rem;position:relative;padding-left:18px}.note p::before{content:"◆";position:absolute;left:0;top:0;color:var(--accent);font-size:.75rem;line-height:1.6}.note.important{border-top:3px solid var(--accent)}.note.info{border-top:3px solid var(--accent2)}.note.activities{border-top:3px solid var(--accent3)}footer{color:var(--muted);font-size:.82rem;margin-top:16px}
     @media(max-width:720px){.wrap{width:min(100% - 24px,1280px);margin-top:20px}header{flex-direction:column;align-items:flex-start}.notes{grid-template-columns:1fr}.panel{border-radius:16px}}
   </style>
 </head>
@@ -52,6 +52,7 @@
       </article>
     
       <article class="note info"><h2>További információk</h2><p>Fényképezéssel kapcsolatban. Egyéni: szeptember 16-án, szerdán, a 6. órában. Barátos- és testvéres fényképezés: szeptember 16-18. között, minden nap 7:00 és 7:45 között.</p></article>
+      
       <article class="note activities"><h2>Különórák</h2>
         <p> Labdás foglalkozás: Kedd - Csütörtök 14:00 - 15:00</p>
         <p> Ács Máté +36709677000 acs.mate@adamjeno.com</p>
