@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
   <style>
-    :root{--bg:#0b1020;--panel:#121a32;--panel2:#182240;--line:rgba(148,163,184,.16);--text:#e8eefc;--muted:#aab6d3;--accent:#5eead4;--accent2:#60a5fa;--accent3:#fb923c;--shadow:0 24px 60px rgba(0,0,0,.35);--radius:22px}
+    :root{--bg:#0b1020;--panel:#121a32;--panel2:#182240;--line:rgba(148,163,184,.16);--text:#e8eefc;--muted:#aab6d3;--accent:#5eead4;--accent2:#60a5fa;--accent3:#fb923c;--hockey:#7dd3fc;--shadow:0 24px 60px rgba(0,0,0,.35);--radius:22px}
     *{box-sizing:border-box;margin:0;padding:0}
     body{min-height:100vh;font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--text);background:radial-gradient(900px 500px at 10% -10%,rgba(94,234,212,.16),transparent 50%),radial-gradient(700px 420px at 100% 0%,rgba(96,165,250,.18),transparent 45%),var(--bg)}
     .wrap{width:min(1280px,calc(100% - 32px));margin:32px auto 48px}
@@ -19,7 +19,20 @@
     .panel{overflow-x:auto;background:linear-gradient(180deg,rgba(24,34,64,.92),rgba(18,26,50,.92));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
     table{width:100%;min-width:930px;table-layout:fixed;border-collapse:collapse}th,td{width:16.666%;padding:15px 14px;text-align:left;vertical-align:middle;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}th:last-child,td:last-child{border-right:none}tbody tr:last-child td{border-bottom:none}th{color:var(--muted);background:rgba(11,16,32,.35);font-size:.78rem;letter-spacing:.07em;text-transform:uppercase}tbody tr{transition:background .15s ease}tbody tr:hover{background:rgba(96,165,250,.06)}
     .period{font-family:"IBM Plex Mono",ui-monospace,monospace;color:var(--accent);font-weight:600;font-size:1.02rem;white-space:nowrap}.lesson{min-height:28px;border-radius:9px;padding:7px 9px;background:rgba(96,165,250,.09);border:1px solid rgba(96,165,250,.13);font-weight:600;font-size:.93rem;line-height:1.25}.empty{color:#5f6d8c;padding:8px 3px;font-size:.9rem}.lunch{background:rgba(94,234,212,.08);color:var(--accent);font-weight:600}
-    .notes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}.note{min-height:162px;padding:22px;background:linear-gradient(180deg,rgba(24,34,64,.84),rgba(18,26,50,.9));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.note h2{font-size:1.05rem;letter-spacing:-.01em;margin-bottom:10px}.note p{color:var(--muted);line-height:1.55;font-size:.94rem;position:relative;padding-left:18px}.note p::before{content:"◆";position:absolute;left:0;top:0;color:var(--accent);font-size:.75rem;line-height:1.6}.note.important{border-top:3px solid var(--accent)}.note.info{border-top:3px solid var(--accent2)}.note.activities{border-top:3px solid var(--accent3)}footer{color:var(--muted);font-size:.82rem;margin-top:16px}
+    .notes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}.note{min-height:162px;padding:22px;background:linear-gradient(180deg,rgba(24,34,64,.84),rgba(18,26,50,.9));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.note h2{font-size:1.05rem;letter-spacing:-.01em;margin-bottom:10px}.note p{color:var(--muted);line-height:1.55;font-size:.94rem;position:relative;padding-left:18px}.note p::before{content:"◆";position:absolute;left:0;top:0;color:var(--accent);font-size:.75rem;line-height:1.6}.note.important{border-top:3px solid var(--accent)}.note.info{border-top:3px solid var(--accent2)}.note.activities{border-top:3px solid var(--accent3)}
+    .note.hockey{border-top:3px solid var(--hockey);color:#f4fbff;background:
+      radial-gradient(circle at 18% 78%, rgba(248,250,252,.18) 0 18px, transparent 19px),
+      radial-gradient(circle at 82% 22%, rgba(248,250,252,.14) 0 26px, transparent 27px),
+      linear-gradient(90deg, transparent 47%, rgba(239,68,68,.42) 47%, rgba(239,68,68,.42) 53%, transparent 53%),
+      linear-gradient(180deg, rgba(14,116,144,.18), transparent 42%),
+      repeating-linear-gradient(90deg, rgba(186,230,253,.08) 0 1px, transparent 1px 42px),
+      linear-gradient(180deg, rgba(8,47,73,.55), rgba(12,74,110,.72) 45%, rgba(15,23,42,.92));
+      box-shadow:var(--shadow), inset 0 0 0 1px rgba(125,211,252,.18);
+    }
+    .note.hockey h2{color:#e0f2fe;text-shadow:0 1px 0 rgba(8,47,73,.45)}
+    .note.hockey p{color:#dbeafe}
+    .note.hockey p::before{color:var(--hockey)}
+    footer{color:var(--muted);font-size:.82rem;margin-top:16px}
      /* Keep links (URLs, phone numbers, emails) same colour as normal text */
     .note a {color: inherit;text-decoration: none;}
     .note a:hover {text-decoration: underline;}
@@ -32,7 +45,6 @@
       <div class="brand"><div class="mark">K26</div><div><h1>Köböl 2026 1.B Osztály</h1><p class="sub">Órarend</p></div></div>
       <div class="week-label">2026/2027-es tanév</div>
     </header>
-
     <section class="panel" aria-label="Heti órarend">
       <table>
         <thead><tr><th>Óra / idő</th><th>Hétfő</th><th>Kedd</th><th>Szerda</th><th>Csütörtök</th><th>Péntek</th></tr></thead>
@@ -82,6 +94,26 @@
         <p>   Rovó Orsolya &#128241; <a href="tel:+36309406136">+36309406136</a> &#128231; <a href="www.rockandmagic.hu" target="_blank" rel="noopener noreferrer"> www.rockandmagic.hu</a> </p>
         <p> &#128131; Cheerleading: Szerda 16:00-17:00</p>
         <p>   BEAC Cheerleading Utánpótlás &#128241; <a href="tel:+36306748847">+36306748847</a> &#128231; <a href="mailto:cheer@beac.elte.hu">cheer@beac.elte.hu</a> </p>
+      </article>
+
+      <article class="note hockey"><h2>&#127954; Jégkorong / Hoki</h2>
+        <p>Szerdán a 3. és 4. órában Tesi (hoki): 9:55–11:40.</p>
+        <p> Második óra után indulnak Noémi és Panka nénivel
+          - Busz kiállása: Villányi út, a Pető Intézet előtti buszmegálló
+          - Indulás a pályára: 10:20
+          - Érkezés a pályához: 10:40
+          - Korcsolyaoktatás: 11:00-11:50
+          - Visszaindulás az iskolához: 12:10
+          - Érkezés az iskolához: 12:30</p>
+        <p>Alkalmanként minimum 2 szülőnek kellene jönnie (az első néhány alkalommal jó lenne, ha ennél többen lennénk)</p>
+        <p>Kísérő szülők nem utazhatnak a busszal, nekik közvetlenül a Tüskesátorhoz kellene érkezniük (fehér kerítés, fehér kapu)</p>
+        <p>A lábméretet be kellene írni az üzenőbe</p>
+        <p>Vízhatlan overál vagy sídzseki + sínadrág, hátizsákban, ne külön szatyorban</p>
+        <p>Síkesztyű kötelező, anélkül nem mehetnek a jégre</p>
+        <p>Kulacs, kis harapnivaló, pl. müzliszelet</p>
+        <p>Vékony sapka ajánlott</p>
+        <p>Korcsolyát és a sisakot kapnak a helyszínen</p>
+        <p>A sátorban kb. 1 fok van, ezért a kísérő szülők is melegen öltözzenek</p>
       </article>
     </section>
     <footer>Köböl 2026 · 1.B Osztály · Site Admin: Nguyen Quang Ngoc (Nándi) </footer>
