@@ -7,54 +7,76 @@
         "Monday": {
           "date": "szeptember 28.",
           "menuA": [
-            "N/A",
+            "Paradicsomleves",
+            "Rántott csirkemell rizzsel",
+            "Friss saláta",
+            "Gyümölcssaláta"
           ],
           "menuB": [
-            "N/A",
+            "Zöldségleves",
+            "Vegetáriánus tészta",
+            "Párolt zöldség",
+            "Natúr joghurt mézzel"
           ]
         },
         "Tuesday": {
           "date": "szeptember 29.",
           "menuA": [
-            "N/A",
+            "Gulyásleves",
+            "Marhapörkölt galuskával",
+            "Csemege uborka",
+            "Csokoládés puding"
           ],
           "menuB": [
-            "N/A",
+            "Karfiolleves",
+            "Sütőtökös lasagne",
+            "Római saláta",
+            "Friss gyümölcs"
           ]
         },
         "Wednesday": {
           "date": "szeptember 30.",
           "menuA": [
-            "N/A",
+            "Húsleves csigatésztával",
+            "Hortobágyi húsos palacsinta",
+            "Burgonyapüré",
+            "Túró rudi"
           ],
           "menuB": [
-            "Bazsalikomos paradicsomleves",
-            "Parajos penne sonkával sajttal sütve",
-            "Narancs",
+            "Brokkolikrémleves",
+            "Quinoa saláta zöldségekkel",
+            "Avokádó krém",
+            "Banános muffin"
           ]
         },
         "Thursday": {
           "date": "október 1.",
           "menuA": [
-            "Húsgombócleves zöldségekkel",
-            "Lecsós sertésszelet, Hagymás törtburgonya",
-            "Csemege uborka"
+            "Bableves",
+            "Töltött káposzta",
+            "Savanyú káposzta",
+            "Almás pite"
           ],
           "menuB": [
-            "Húsgombócleves zöldségekkel",
-            "Falafel, Teljes kiőrlésű kenyér",
-            "Zöldbabfőzelék, Fasírtgolyó"
+            "Spenótkrémleves",
+            "Padlizsános rakott tészta",
+            "Görög saláta",
+            "Gyümölcsjoghurt"
           ]
         },
         "Friday": {
           "date": "október 2.",
           "menuA": [
-            "Tejfölös sárgaborsó leves",
-            "Szilvatöltelékes gombóc, Mákos fahéjas porcukor"
+            "Halászlé",
+            "Fogas filé petrezselymes burgonyával",
+            "Citromos szósz",
+            "Mákos guba"
           ],
           "menuB": [
-            "Tejfölös sárgaborsó leves",
-            "Sajtkrémes galuska, Pirított hagyma"
+            "Zöldborsóleves",
+            "Gombás rizottó",
+            "Reszelt parmezán",
+            "Tiramisu"
           ]
         }
       }
