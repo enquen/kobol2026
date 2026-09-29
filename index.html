@@ -33,10 +33,37 @@
     .note.hockey p{color:#dbeafe}
     .note.hockey p::before{color:var(--hockey)}
     footer{color:var(--muted);font-size:.82rem;margin-top:16px}
-     /* Keep links (URLs, phone numbers, emails) same colour as normal text */
     .note a {color: inherit;text-decoration: none;}
     .note a:hover {text-decoration: underline;}
-    @media(max-width:720px){.wrap{width:min(100% - 24px,1280px);margin-top:20px}header{flex-direction:column;align-items:flex-start}.notes{grid-template-columns:1fr}.panel{border-radius:16px}}
+
+    /* Menu Section Styles */
+    .menu-section{margin-top:32px}
+    .menu-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;gap:16px;flex-wrap:wrap}
+    .menu-title{font-size:1.3rem;font-weight:700;color:var(--accent);display:flex;align-items:center;gap:10px}
+    .menu-nav{display:flex;gap:10px;align-items:center}
+    .menu-nav button{background:rgba(94,234,212,.12);border:1px solid rgba(94,234,212,.28);color:var(--accent);padding:8px 16px;border-radius:999px;cursor:pointer;font-weight:600;font-size:.9rem;transition:all .2s ease}
+    .menu-nav button:hover:not(:disabled){background:rgba(94,234,212,.25);transform:scale(1.05)}
+    .menu-nav button:disabled{opacity:.35;cursor:not-allowed;transform:none}
+    .menu-week-label{color:var(--muted);font-size:.95rem;font-weight:600}
+    .menu-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+    .menu-day-card{background:linear-gradient(180deg,rgba(24,34,64,.88),rgba(18,26,50,.92));border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow)}
+    .menu-day-header{background:linear-gradient(135deg,rgba(94,234,212,.15),rgba(96,165,250,.12));padding:10px 12px;border-radius:10px;margin-bottom:12px;text-align:center}
+    .menu-day-name{font-weight:700;font-size:1.05rem;color:var(--accent)}
+    .menu-day-date{font-size:.8rem;color:var(--muted);margin-top:3px}
+    .menu-option{margin-bottom:12px;padding:12px;border-radius:10px;border-left:4px solid}
+    .menu-a{background:rgba(96,165,250,.08);border-left-color:var(--accent2)}
+    .menu-b{background:rgba(251,146,60,.08);border-left-color:var(--accent3)}
+    .menu-label{font-weight:700;font-size:.9rem;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+    .menu-a .menu-label{color:var(--accent2)}
+    .menu-b .menu-label{color:var(--accent3)}
+    .menu-items{list-style:none}
+    .menu-items li{padding:5px 0;font-size:.88rem;color:var(--text);border-bottom:1px dashed rgba(148,163,184,.12)}
+    .menu-items li:last-child{border-bottom:none}
+    .menu-loading{grid-column:1/-1;text-align:center;padding:40px;color:var(--muted);font-size:1.1rem}
+    .menu-error{grid-column:1/-1;text-align:center;padding:40px;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.25);border-radius:12px;color:#fca5a5;font-size:1rem}
+    .today-highlight{border:2px solid var(--accent);box-shadow:0 0 20px rgba(94,234,212,.3),var(--shadow)}
+    @media(max-width:900px){.menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:720px){.wrap{width:min(100% - 24px,1280px);margin-top:20px}header{flex-direction:column;align-items:flex-start}.notes{grid-template-columns:1fr}.panel{border-radius:16px}.menu-grid{grid-template-columns:1fr}.menu-header{flex-direction:column;align-items:flex-start}}
   </style>
 </head>
 <body>
@@ -45,6 +72,7 @@
       <div class="brand"><div class="mark">K26</div><div><h1>Köböl 2026 1.B Osztály</h1><p class="sub">Órarend</p></div></div>
       <div class="week-label">2026/2027-es tanév</div>
     </header>
+
     <section class="panel" aria-label="Heti órarend">
       <table>
         <thead><tr><th>Óra / idő</th><th>Hétfő</th><th>Kedd</th><th>Szerda</th><th>Csütörtök</th><th>Péntek</th></tr></thead>
@@ -60,13 +88,29 @@
       </table>
     </section>
 
+    <!-- MENU SECTION START -->
+    <section class="menu-section" aria-label="Heti étlap">
+      <div class="menu-header">
+        <div class="menu-title">🍽️ Heti Étlap</div>
+        <div class="menu-nav">
+          <button id="menuPrevWeek" aria-label="Előző hét">← Előző</button>
+          <span class="menu-week-label" id="menuWeekLabel">Betöltés...</span>
+          <button id="menuNextWeek" aria-label="Következő hét">Következő →</button>
+        </div>
+      </div>
+      <div class="menu-grid" id="menuGrid">
+        <div class="menu-loading">Étlap betöltése...</div>
+      </div>
+    </section>
+    <!-- MENU SECTION END -->
+
     <section class="notes" aria-label="Tájékoztatók">
       <article class="note important"><h2>Fontos tudnivalók</h2>
-        
+
         <p> Indulnak a különórák. Kérjük, hogy az üzenőfüzet elején jelezzétek, melyikre jelentkeztek. Panka ez alapján tudja küldeni a gyerekeket órákra.</p>
         <p> Akik 16 órára érkeznek gyermekükért, legyenek szívesek az iskola bejárata előtti lépcső alján várakozni. Kérem, hogy ezzel segítsétek a gyermekek biztonságos és zavartalan távozását.</p>
       </article>
-    
+
       <article class="note info"><h2>További információk</h2>
         <p> 15 ezer forint / gyerek az első fél évre az osztálypénz, emailben a fizetési tudnivalók.</p>
         <p> Osztály nyomtatója működik, toner megérkezett, irodai papír is van, köszönjük a felajánlásokat ezzel kapcsolatban. </p>
@@ -74,7 +118,7 @@
           <p> <a href="https://docs.google.com/spreadsheets/d/1w8RkZwuixbSs6wVpwVnWuN35ZJfMyVjm" target="_blank" rel="noopener noreferrer"> Befizetések, és kiadások </a> </p>
           <p> <a href="https://drive.google.com/drive/u/1/folders/1tklwqT_okkaIxpWdRn1xy6REYTPUwrwj" target="_blank" rel="noopener noreferrer"> Számlák (Google Drive) </a> </p>
       </article>
-      
+
       <article class="note activities"><h2>Különórák</h2>
         <p> &#127952; Labdás foglalkozás: Kedd és Csütörtök 14:00 - 15:00</p>
         <p>   Ács Máté &#128241; <a href="tel:+36709677000">+36709677000</a> &#128231; <a href="mailto:acs.mate@adamjeno.com">acs.mate@adamjeno.com</a></p>
@@ -116,5 +160,203 @@
     </section>
     <footer>Köböl 2026 · 1.B Osztály · Site Admin: Nguyen Quang Ngoc (Nándi) </footer>
   </main>
+
+  <script>
+    // ============================================
+    // MENU DATA - Will be loaded from menu.json
+    // ============================================
+    let menuData = null;
+    let currentWeekIndex = 0;
+
+    // ============================================
+    // HELPER: Parse Hungarian date string to compare
+    // ============================================
+    function parseHungarianDate(dateStr) {
+      // Expects format: "október 5." or "szeptember 28."
+      const months = {
+        'január': 0, 'február': 1, 'március': 2, 'április': 3,
+        'május': 4, 'június': 5, 'július': 6, 'augusztus': 7,
+        'szeptember': 8, 'október': 9, 'november': 10, 'december': 11
+      };
+
+      const parts = dateStr.toLowerCase().replace('.', '').trim().split(' ');
+      if (parts.length >= 2) {
+        const month = months[parts[0]];
+        const day = parseInt(parts[1], 10);
+        if (!isNaN(month) && !isNaN(day)) {
+          const year = new Date().getFullYear();
+          return new Date(year, month, day);
+        }
+      }
+      return null;
+    }
+
+    // ============================================
+    // HELPER: Get current day of week (1=Monday, 5=Friday)
+    // ============================================
+    function getCurrentDayOfWeek() {
+      const day = new Date().getDay();
+      return day === 0 ? 7 : day; // Convert Sunday from 0 to 7
+    }
+
+    // ============================================
+    // HELPER: Check if date is in range
+    // ============================================
+    function isDateInRange(dateStr, year) {
+      const parsed = parseHungarianDate(dateStr);
+      if (!parsed) return false;
+
+      // Set the year from the week label if provided
+      parsed.setFullYear(year);
+
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      return parsed.getTime() === today.getTime();
+    }
+
+    // ============================================
+    // FIND CURRENT WEEK
+    // ============================================
+    function findCurrentWeek() {
+      if (!menuData || !menuData.weeks || menuData.weeks.length === 0) {
+        return 0;
+      }
+
+      const today = new Date();
+      const currentYear = today.getFullYear();
+
+      // Try to find week containing current year
+      for (let i = 0; i < menuData.weeks.length; i++) {
+        const week = menuData.weeks[i];
+
+        // Extract year from weekLabel (e.g., "2026. szeptember 28. – október 2.")
+        const yearMatch = week.weekLabel.match(/^(\d{4})\./);
+        const weekYear = yearMatch ? parseInt(yearMatch[1], 10) : currentYear;
+
+        // Check if any day in this week matches today
+        const days = Object.values(week.days);
+        for (const dayData of days) {
+          if (isDateInRange(dayData.date, weekYear)) {
+            console.log('Found current week:', week.weekLabel);
+            return i;
+          }
+        }
+      }
+
+      // If no exact match, find the closest future week or first week
+      console.log('No exact date match found, using first week');
+      return 0;
+    }
+
+    // ============================================
+    // LOAD MENU DATA FROM JSON FILE
+    // ============================================
+    async function loadMenuData() {
+      try {
+        const response = await fetch('menu.json');
+        if (!response.ok) {
+          throw new Error('Nem sikerült betölteni a menü adatokat');
+        }
+        menuData = await response.json();
+
+        // Find and set current week
+        currentWeekIndex = findCurrentWeek();
+        renderMenu();
+      } catch (error) {
+        console.error('Menu load error:', error);
+        document.getElementById('menuGrid').innerHTML = 
+          '<div class="menu-error">⚠️ Nem sikerült betölteni az étlapot. Ellenőrizd, hogy a menu.json fájl elérhető.</div>';
+        document.getElementById('menuWeekLabel').textContent = '';
+      }
+    }
+
+    // ============================================
+    // RENDER MENU
+    // ============================================
+    function renderMenu() {
+      if (!menuData || !menuData.weeks || menuData.weeks.length === 0) {
+        document.getElementById('menuGrid').innerHTML = 
+          '<div class="menu-error">Nincs elérhető étlap</div>';
+        return;
+      }
+
+      const week = menuData.weeks[currentWeekIndex];
+      document.getElementById('menuWeekLabel').textContent = week.weekLabel;
+
+      const dayOrder = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+      const dayNames = {
+        'Monday': 'Hétfő',
+        'Tuesday': 'Kedd',
+        'Wednesday': 'Szerda',
+        'Thursday': 'Csütörtök',
+        'Friday': 'Péntek'
+      };
+
+      // Get current day for highlighting
+      const currentDayIndex = getCurrentDayOfWeek();
+      const todayClass = currentDayIndex >= 1 && currentDayIndex <= 5 ? dayOrder[currentDayIndex - 1] : null;
+
+      let html = '';
+      dayOrder.forEach((day, index) => {
+        const dayData = week.days[day];
+        if (!dayData) return;
+
+        const isToday = day === todayClass;
+        const highlightClass = isToday ? 'today-highlight' : '';
+
+        html += `
+          <div class="menu-day-card ${highlightClass}">
+            <div class="menu-day-header">
+              <div class="menu-day-name">${dayNames[day]}${isToday ? ' <span style="color:var(--accent);font-size:.75rem">● MA</span>' : ''}</div>
+              <div class="menu-day-date">${dayData.date}</div>
+            </div>
+
+            <div class="menu-option menu-a">
+              <div class="menu-label">🅰️ A menü</div>
+              <ul class="menu-items">
+                ${dayData.menuA.map(item => `<li>${item}</li>`).join('')}
+              </ul>
+            </div>
+
+            <div class="menu-option menu-b">
+              <div class="menu-label">🅱️ B menü</div>
+              <ul class="menu-items">
+                ${dayData.menuB.map(item => `<li>${item}</li>`).join('')}
+              </ul>
+            </div>
+          </div>
+        `;
+      });
+
+      document.getElementById('menuGrid').innerHTML = html;
+
+      // Update button states
+      document.getElementById('menuPrevWeek').disabled = currentWeekIndex === 0;
+      document.getElementById('menuNextWeek').disabled = currentWeekIndex === menuData.weeks.length - 1;
+    }
+
+    // ============================================
+    // NAVIGATION
+    // ============================================
+    document.getElementById('menuPrevWeek').addEventListener('click', () => {
+      if (currentWeekIndex > 0) {
+        currentWeekIndex--;
+        renderMenu();
+      }
+    });
+
+    document.getElementById('menuNextWeek').addEventListener('click', () => {
+      if (menuData && currentWeekIndex < menuData.weeks.length - 1) {
+        currentWeekIndex++;
+        renderMenu();
+      }
+    });
+
+    // ============================================
+    // INITIALIZE
+    // ============================================
+    loadMenuData();
+  </script>
 </body>
 </html>
