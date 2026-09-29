@@ -163,9 +163,63 @@
 
   <script>
     // ============================================
-    // MENU DATA
+    // EMBEDDED MENU DATA - 2026/2027 School Year
+    // All weeks with "N/A" placeholder (3 items)
     // ============================================
-    let menuData = null;
+    const menuData = {
+      "weeks": [
+        {"weekId":"2026-W39","weekLabel":"2026. szeptember 28. – október 2.","days":{"Monday":{"date":"szeptember 28."},"Tuesday":{"date":"szeptember 29."},"Wednesday":{"date":"szeptember 30."},"Thursday":{"date":"október 1."},"Friday":{"date":"október 2."}}},
+        {"weekId":"2026-W40","weekLabel":"2026. október 5. – október 9.","days":{"Monday":{"date":"október 5."},"Tuesday":{"date":"október 6."},"Wednesday":{"date":"október 7."},"Thursday":{"date":"október 8."},"Friday":{"date":"október 9."}}},
+        {"weekId":"2026-W41","weekLabel":"2026. október 12. – október 16.","days":{"Monday":{"date":"október 12."},"Tuesday":{"date":"október 13."},"Wednesday":{"date":"október 14."},"Thursday":{"date":"október 15."},"Friday":{"date":"október 16."}}},
+        {"weekId":"2026-W42","weekLabel":"2026. október 19. – október 23.","days":{"Monday":{"date":"október 19."},"Tuesday":{"date":"október 20."},"Wednesday":{"date":"október 21."},"Thursday":{"date":"október 22."},"Friday":{"date":"október 23."}}},
+        {"weekId":"2026-W43","weekLabel":"2026. október 26. – október 30.","days":{"Monday":{"date":"október 26."},"Tuesday":{"date":"október 27."},"Wednesday":{"date":"október 28."},"Thursday":{"date":"október 29."},"Friday":{"date":"október 30."}}},
+        {"weekId":"2026-W44","weekLabel":"2026. november 2. – november 6.","days":{"Monday":{"date":"november 2."},"Tuesday":{"date":"november 3."},"Wednesday":{"date":"november 4."},"Thursday":{"date":"november 5."},"Friday":{"date":"november 6."}}},
+        {"weekId":"2026-W45","weekLabel":"2026. november 9. – november 13.","days":{"Monday":{"date":"november 9."},"Tuesday":{"date":"november 10."},"Wednesday":{"date":"november 11."},"Thursday":{"date":"november 12."},"Friday":{"date":"november 13."}}},
+        {"weekId":"2026-W46","weekLabel":"2026. november 16. – november 20.","days":{"Monday":{"date":"november 16."},"Tuesday":{"date":"november 17."},"Wednesday":{"date":"november 18."},"Thursday":{"date":"november 19."},"Friday":{"date":"november 20."}}},
+        {"weekId":"2026-W47","weekLabel":"2026. november 23. – november 27.","days":{"Monday":{"date":"november 23."},"Tuesday":{"date":"november 24."},"Wednesday":{"date":"november 25."},"Thursday":{"date":"november 26."},"Friday":{"date":"november 27."}}},
+        {"weekId":"2026-W48","weekLabel":"2026. november 30. – december 4.","days":{"Monday":{"date":"november 30."},"Tuesday":{"date":"december 1."},"Wednesday":{"date":"december 2."},"Thursday":{"date":"december 3."},"Friday":{"date":"december 4."}}},
+        {"weekId":"2026-W49","weekLabel":"2026. december 7. – december 11.","days":{"Monday":{"date":"december 7."},"Tuesday":{"date":"december 8."},"Wednesday":{"date":"december 9."},"Thursday":{"date":"december 10."},"Friday":{"date":"december 11."}}},
+        {"weekId":"2026-W50","weekLabel":"2026. december 14. – december 18.","days":{"Monday":{"date":"december 14."},"Tuesday":{"date":"december 15."},"Wednesday":{"date":"december 16."},"Thursday":{"date":"december 17."},"Friday":{"date":"december 18."}}},
+        {"weekId":"2026-W51","weekLabel":"2026. december 21. – december 25.","days":{"Monday":{"date":"december 21."},"Tuesday":{"date":"december 22."},"Wednesday":{"date":"december 23."},"Thursday":{"date":"december 24."},"Friday":{"date":"december 25."}}},
+        {"weekId":"2026-W52","weekLabel":"2026. december 28. – január 1.","days":{"Monday":{"date":"december 28."},"Tuesday":{"date":"december 29."},"Wednesday":{"date":"december 30."},"Thursday":{"date":"december 31."},"Friday":{"date":"január 1."}}},
+        {"weekId":"2027-W01","weekLabel":"2027. január 4. – január 8.","days":{"Monday":{"date":"január 4."},"Tuesday":{"date":"január 5."},"Wednesday":{"date":"január 6."},"Thursday":{"date":"január 7."},"Friday":{"date":"január 8."}}},
+        {"weekId":"2027-W02","weekLabel":"2027. január 11. – január 15.","days":{"Monday":{"date":"január 11."},"Tuesday":{"date":"január 12."},"Wednesday":{"date":"január 13."},"Thursday":{"date":"január 14."},"Friday":{"date":"január 15."}}},
+        {"weekId":"2027-W03","weekLabel":"2027. január 18. – január 22.","days":{"Monday":{"date":"január 18."},"Tuesday":{"date":"január 19."},"Wednesday":{"date":"január 20."},"Thursday":{"date":"január 21."},"Friday":{"date":"január 22."}}},
+        {"weekId":"2027-W04","weekLabel":"2027. január 25. – január 29.","days":{"Monday":{"date":"január 25."},"Tuesday":{"date":"január 26."},"Wednesday":{"date":"január 27."},"Thursday":{"date":"január 28."},"Friday":{"date":"január 29."}}},
+        {"weekId":"2027-W05","weekLabel":"2027. február 1. – február 5.","days":{"Monday":{"date":"február 1."},"Tuesday":{"date":"február 2."},"Wednesday":{"date":"február 3."},"Thursday":{"date":"február 4."},"Friday":{"date":"február 5."}}},
+        {"weekId":"2027-W06","weekLabel":"2027. február 8. – február 12.","days":{"Monday":{"date":"február 8."},"Tuesday":{"date":"február 9."},"Wednesday":{"date":"február 10."},"Thursday":{"date":"február 11."},"Friday":{"date":"február 12."}}},
+        {"weekId":"2027-W07","weekLabel":"2027. február 15. – február 19.","days":{"Monday":{"date":"február 15."},"Tuesday":{"date":"február 16."},"Wednesday":{"date":"február 17."},"Thursday":{"date":"február 18."},"Friday":{"date":"február 19."}}},
+        {"weekId":"2027-W08","weekLabel":"2027. február 22. – február 26.","days":{"Monday":{"date":"február 22."},"Tuesday":{"date":"február 23."},"Wednesday":{"date":"február 24."},"Thursday":{"date":"február 25."},"Friday":{"date":"február 26."}}},
+        {"weekId":"2027-W09","weekLabel":"2027. március 1. – március 5.","days":{"Monday":{"date":"március 1."},"Tuesday":{"date":"március 2."},"Wednesday":{"date":"március 3."},"Thursday":{"date":"március 4."},"Friday":{"date":"március 5."}}},
+        {"weekId":"2027-W10","weekLabel":"2027. március 8. – március 12.","days":{"Monday":{"date":"március 8."},"Tuesday":{"date":"március 9."},"Wednesday":{"date":"március 10."},"Thursday":{"date":"március 11."},"Friday":{"date":"március 12."}}},
+        {"weekId":"2027-W11","weekLabel":"2027. március 15. – március 19.","days":{"Monday":{"date":"március 15."},"Tuesday":{"date":"március 16."},"Wednesday":{"date":"március 17."},"Thursday":{"date":"március 18."},"Friday":{"date":"március 19."}}},
+        {"weekId":"2027-W12","weekLabel":"2027. március 22. – március 26.","days":{"Monday":{"date":"március 22."},"Tuesday":{"date":"március 23."},"Wednesday":{"date":"március 24."},"Thursday":{"date":"március 25."},"Friday":{"date":"március 26."}}},
+        {"weekId":"2027-W13","weekLabel":"2027. március 29. – április 2.","days":{"Monday":{"date":"március 29."},"Tuesday":{"date":"március 30."},"Wednesday":{"date":"március 31."},"Thursday":{"date":"április 1."},"Friday":{"date":"április 2."}}},
+        {"weekId":"2027-W14","weekLabel":"2027. április 5. – április 9.","days":{"Monday":{"date":"április 5."},"Tuesday":{"date":"április 6."},"Wednesday":{"date":"április 7."},"Thursday":{"date":"április 8."},"Friday":{"date":"április 9."}}},
+        {"weekId":"2027-W15","weekLabel":"2027. április 12. – április 16.","days":{"Monday":{"date":"április 12."},"Tuesday":{"date":"április 13."},"Wednesday":{"date":"április 14."},"Thursday":{"date":"április 15."},"Friday":{"date":"április 16."}}},
+        {"weekId":"2027-W16","weekLabel":"2027. április 19. – április 23.","days":{"Monday":{"date":"április 19."},"Tuesday":{"date":"április 20."},"Wednesday":{"date":"április 21."},"Thursday":{"date":"április 22."},"Friday":{"date":"április 23."}}},
+        {"weekId":"2027-W17","weekLabel":"2027. április 26. – április 30.","days":{"Monday":{"date":"április 26."},"Tuesday":{"date":"április 27."},"Wednesday":{"date":"április 28."},"Thursday":{"date":"április 29."},"Friday":{"date":"április 30."}}},
+        {"weekId":"2027-W18","weekLabel":"2027. május 3. – május 7.","days":{"Monday":{"date":"május 3."},"Tuesday":{"date":"május 4."},"Wednesday":{"date":"május 5."},"Thursday":{"date":"május 6."},"Friday":{"date":"május 7."}}},
+        {"weekId":"2027-W19","weekLabel":"2027. május 10. – május 14.","days":{"Monday":{"date":"május 10."},"Tuesday":{"date":"május 11."},"Wednesday":{"date":"május 12."},"Thursday":{"date":"május 13."},"Friday":{"date":"május 14."}}},
+        {"weekId":"2027-W20","weekLabel":"2027. május 17. – május 21.","days":{"Monday":{"date":"május 17."},"Tuesday":{"date":"május 18."},"Wednesday":{"date":"május 19."},"Thursday":{"date":"május 20."},"Friday":{"date":"május 21."}}},
+        {"weekId":"2027-W21","weekLabel":"2027. május 24. – május 28.","days":{"Monday":{"date":"május 24."},"Tuesday":{"date":"május 25."},"Wednesday":{"date":"május 26."},"Thursday":{"date":"május 27."},"Friday":{"date":"május 28."}}},
+        {"weekId":"2027-W22","weekLabel":"2027. május 31. – június 4.","days":{"Monday":{"date":"május 31."},"Tuesday":{"date":"május 32."},"Wednesday":{"date":"június 1."},"Thursday":{"date":"június 2."},"Friday":{"date":"június 3."}}},
+        {"weekId":"2027-W23","weekLabel":"2027. június 7. – június 11.","days":{"Monday":{"date":"június 7."},"Tuesday":{"date":"június 8."},"Wednesday":{"date":"június 9."},"Thursday":{"date":"június 10."},"Friday":{"date":"június 11."}}},
+        {"weekId":"2027-W24","weekLabel":"2027. június 14. – június 18.","days":{"Monday":{"date":"június 14."},"Tuesday":{"date":"június 15."},"Wednesday":{"date":"június 16."},"Thursday":{"date":"június 17."},"Friday":{"date":"június 18."}}},
+        {"weekId":"2027-W25","weekLabel":"2027. június 21. – június 25.","days":{"Monday":{"date":"június 21."},"Tuesday":{"date":"június 22."},"Wednesday":{"date":"június 23."},"Thursday":{"date":"június 24."},"Friday":{"date":"június 25."}}},
+        {"weekId":"2027-W26","weekLabel":"2027. június 28. – július 2.","days":{"Monday":{"date":"június 28."},"Tuesday":{"date":"június 29."},"Wednesday":{"date":"június 30."},"Thursday":{"date":"július 1."},"Friday":{"date":"július 2."}}}
+      ]
+    };
+
+    // Add menuA and menuB with "N/A" (3 items) to all days
+    Object.keys(menuData.weeks).forEach(weekIndex => {
+      const week = menuData.weeks[weekIndex];
+      Object.keys(week.days).forEach(day => {
+        week.days[day].menuA = ["N/A", "N/A", "N/A"];
+        week.days[day].menuB = ["N/A", "N/A", "N/A"];
+      });
+    });
+
     let currentWeekIndex = 0;
 
     // ============================================
@@ -237,70 +291,6 @@
 
       console.log('No exact date match found, using first week');
       return 0;
-    }
-
-    // ============================================
-    // LOAD MENU DATA FROM JSON FILE
-    // ============================================
-    async function loadMenuData() {
-      try {
-        // Try multiple paths to work with both GitHub Pages and Cloudflare Worker
-        const currentOrigin = window.location.origin;
-        const possiblePaths = [
-          'menu.json',
-          './menu.json',
-          currentOrigin + '/menu.json',
-          window.location.href.replace(/[^/]*$/, 'menu.json')
-        ];
-
-        let responseData = null;
-        let usedPath = null;
-
-        for (const path of possiblePaths) {
-          try {
-            console.log('Trying path:', path);
-            const response = await fetch(path);
-            if (response.ok) {
-              responseData = await response.json();
-              usedPath = path;
-              console.log('✓ Success with path:', path);
-              break;
-            }
-          } catch (e) {
-            console.log('✗ Failed path:', path, e.message);
-            continue;
-          }
-        }
-
-        if (!responseData) {
-          throw new Error('Nem sikerült betölteni a menu.json fájlt egyik útvonalról sem');
-        }
-
-        menuData = responseData;
-        console.log('Menu data loaded successfully:', menuData.weeks.length, 'weeks');
-
-        // Find and set current week
-        currentWeekIndex = findCurrentWeek();
-        renderMenu();
-      } catch (error) {
-        console.error('Menu load error:', error);
-        console.log('Current URL:', window.location.href);
-        console.log('Origin:', window.location.origin);
-
-        document.getElementById('menuGrid').innerHTML = `
-          <div class="menu-error">
-            ⚠️ Nem sikerült betölteni az étlapot.<br><br>
-            <strong>Hiba:</strong> ${error.message}<br><br>
-            <strong>Ellenőrizd:</strong><br>
-            1. A menu.json fájl létezik<br>
-            2. Cloudflare Worker helyesen proxyzza a kérést<br>
-            3. Mindkét fájl (HTML + JSON) ugyanabban a mappában van<br><br>
-            <strong>URL:</strong> <code style="background:rgba(255,255,255,.1);padding:2px 6px;border-radius:3px;display:block;margin:8px 0;">${window.location.href}</code><br>
-            <strong>Origin:</strong> <code style="background:rgba(255,255,255,.1);padding:2px 6px;border-radius:3px;display:block;margin:8px 0;">${window.location.origin}</code>
-          </div>
-        `;
-        document.getElementById('menuWeekLabel').textContent = '';
-      }
     }
 
     // ============================================
@@ -387,7 +377,8 @@
     // ============================================
     // INITIALIZE
     // ============================================
-    loadMenuData();
+    currentWeekIndex = findCurrentWeek();
+    renderMenu();
   </script>
 </body>
 </html>
