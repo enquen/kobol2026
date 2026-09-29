@@ -244,14 +244,39 @@
     // ============================================
     async function loadMenuData() {
       try {
-        // Use relative path - works on GitHub Pages
-        const response = await fetch('./menu.json');
+        // Try multiple paths to work with both GitHub Pages and Cloudflare Worker
+        const currentOrigin = window.location.origin;
+        const possiblePaths = [
+          'menu.json',
+          './menu.json',
+          currentOrigin + '/menu.json',
+          window.location.href.replace(/[^/]*$/, 'menu.json')
+        ];
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+        let responseData = null;
+        let usedPath = null;
+
+        for (const path of possiblePaths) {
+          try {
+            console.log('Trying path:', path);
+            const response = await fetch(path);
+            if (response.ok) {
+              responseData = await response.json();
+              usedPath = path;
+              console.log('✓ Success with path:', path);
+              break;
+            }
+          } catch (e) {
+            console.log('✗ Failed path:', path, e.message);
+            continue;
+          }
         }
 
-        menuData = await response.json();
+        if (!responseData) {
+          throw new Error('Nem sikerült betölteni a menu.json fájlt egyik útvonalról sem');
+        }
+
+        menuData = responseData;
         console.log('Menu data loaded successfully:', menuData.weeks.length, 'weeks');
 
         // Find and set current week
@@ -260,18 +285,18 @@
       } catch (error) {
         console.error('Menu load error:', error);
         console.log('Current URL:', window.location.href);
-        console.log('Trying to load from: ./menu.json');
+        console.log('Origin:', window.location.origin);
 
         document.getElementById('menuGrid').innerHTML = `
           <div class="menu-error">
             ⚠️ Nem sikerült betölteni az étlapot.<br><br>
             <strong>Hiba:</strong> ${error.message}<br><br>
             <strong>Ellenőrizd:</strong><br>
-            1. A menu.json fájl létezik a főkönyvtárban<br>
-            2. GitHub Pages be van kapcsolva<br>
-            3. Mindkét fájl ugyanabban a mappában van<br><br>
-            <strong>URL:</strong> <code style="background:rgba(255,255,255,.1);padding:2px 6px;border-radius:3px;">${window.location.origin}${window.location.pathname}</code><br>
-            <strong>JSON URL:</strong> <code style="background:rgba(255,255,255,.1);padding:2px 6px;border-radius:3px;">${window.location.origin}${window.location.pathname.replace(/[^/]*$/, 'menu.json')}</code>
+            1. A menu.json fájl létezik<br>
+            2. Cloudflare Worker helyesen proxyzza a kérést<br>
+            3. Mindkét fájl (HTML + JSON) ugyanabban a mappában van<br><br>
+            <strong>URL:</strong> <code style="background:rgba(255,255,255,.1);padding:2px 6px;border-radius:3px;display:block;margin:8px 0;">${window.location.href}</code><br>
+            <strong>Origin:</strong> <code style="background:rgba(255,255,255,.1);padding:2px 6px;border-radius:3px;display:block;margin:8px 0;">${window.location.origin}</code>
           </div>
         `;
         document.getElementById('menuWeekLabel').textContent = '';
