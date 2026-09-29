@@ -12,30 +12,3217 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{min-height:100vh;font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--text);background:radial-gradient(900px 500px at 10% -10%,rgba(94,234,212,.16),transparent 50%),radial-gradient(700px 420px at 100% 0%,rgba(96,165,250,.18),transparent 45%),var(--bg)}
 .wrap{width:min(1280px,calc(100% - 32px));margin:32px auto 48px}
-header{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:28px}.brand{display:flex;align-items:center;gap:14px}.mark{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;font-weight:700;font-size:1.05rem;color:#06201c;box-shadow:0 10px 24px rgba(94,234,212,.25)}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:28px}
+.brand{display:flex;align-items:center;gap:14px}.mark{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;font-weight:700;font-size:1.05rem;color:#06201c;box-shadow:0 10px 24px rgba(94,234,212,.25)}
 h1{font-size:clamp(1.45rem,4vw,2rem);letter-spacing:-.03em}.sub{color:var(--muted);margin-top:4px;font-size:1rem}.week-label{padding:9px 13px;border:1px solid rgba(94,234,212,.28);border-radius:999px;color:var(--accent);font-size:.9rem;font-weight:600;white-space:nowrap}
 .panel{overflow-x:auto;background:linear-gradient(180deg,rgba(24,34,64,.92),rgba(18,26,50,.92));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
 table{width:100%;min-width:930px;table-layout:fixed;border-collapse:collapse}th,td{width:16.666%;padding:15px 14px;text-align:left;vertical-align:middle;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}th:last-child,td:last-child{border-right:none}tbody tr:last-child td{border-bottom:none}th{color:var(--muted);background:rgba(11,16,32,.35);font-size:.78rem;letter-spacing:.07em;text-transform:uppercase}tbody tr{transition:background .15s ease}tbody tr:hover{background:rgba(96,165,250,.06)}
 .period{font-family:"IBM Plex Mono",ui-monospace,monospace;color:var(--accent);font-weight:600;font-size:1.02rem;white-space:nowrap}.lesson{min-height:28px;border-radius:9px;padding:7px 9px;background:rgba(96,165,250,.09);border:1px solid rgba(96,165,250,.13);font-weight:600;font-size:.93rem;line-height:1.25}.empty{color:#5f6d8c;padding:8px 3px;font-size:.9rem}.lunch{background:rgba(94,234,212,.08);color:var(--accent);font-weight:600}
 .notes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}.note{min-height:162px;padding:22px;background:linear-gradient(180deg,rgba(24,34,64,.84),rgba(18,26,50,.9));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.note h2{font-size:1.05rem;letter-spacing:-.01em;margin-bottom:10px}.note p{color:var(--muted);line-height:1.55;font-size:.94rem;position:relative;padding-left:18px}.note p::before{content:"◆";position:absolute;left:0;top:0;color:var(--accent);font-size:.75rem;line-height:1.6}.note.important{border-top:3px solid var(--accent)}.note.info{border-top:3px solid var(--accent2)}.note.activities{border-top:3px solid var(--accent3)}
-.note.hockey{border-top:3px solid var(--hockey);color:#f4fbff;background:radial-gradient(circle at 18% 78%,rgba(248,250,252,.18) 0 18px,transparent 19px),radial-gradient(circle at 82% 22%,rgba(248,250,252,.14) 0 26px,transparent 27px),linear-gradient(90deg,transparent 47%,rgba(239,68,68,.42) 47%,rgba(239,68,68,.42) 53%,transparent 53%),linear-gradient(180deg,rgba(14,116,144,.18),transparent 42%),repeating-linear-gradient(90deg,rgba(186,230,253,.08) 0 1px,transparent 1px 42px),linear-gradient(180deg,rgba(8,47,73,.55),rgba(12,74,110,.72) 45%,rgba(15,23,42,.92));box-shadow:var(--shadow),inset 0 0 0 1px rgba(125,211,252,.18)}.note.hockey h2{color:#e0f2fe;text-shadow:0 1px 0 rgba(8,47,73,.45)}.note.hockey p{color:#dbeafe}.note.hockey p::before{color:var(--hockey)}
+.note.hockey{border-top:3px solid var(--hockey);color:#f4fbff;background:radial-gradient(circle at 18% 78%,rgba(248,250,252,.18) 0 18px,transparent 19px),radial-gradient(circle at 82% 22%,rgba(248,250,252,.14) 0 26px,transparent 27px),linear-gradient(90deg,transparent 47%,rgba(239,68,68,.42) 47%,rgba(239,68,68,.42) 53%,transparent 53%),linear-gradient(180deg,rgba(14,116,144,.18),transparent 42%),repeating-linear-gradient(90deg,rgba(186,230,253,.08) 0 1px,transparent 1px 42px),linear-gradient(180deg,rgba(8,47,73,.55),rgba(12,74,110,.72) 45%,rgba(15,23,42,.92));box-shadow:var(--shadow),inset 0 0 0 1px rgba(125,211,252,.18)}
+.note.hockey h2{color:#e0f2fe;text-shadow:0 1px 0 rgba(8,47,73,.45)}.note.hockey p{color:#dbeafe}.note.hockey p::before{color:var(--hockey)}
 footer{color:var(--muted);font-size:.82rem;margin-top:16px}.note a{color:inherit;text-decoration:none}.note a:hover{text-decoration:underline}
 .menu-section{margin-top:32px}.menu-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;gap:16px;flex-wrap:wrap}.menu-title{font-size:1.3rem;font-weight:700;color:var(--accent);display:flex;align-items:center;gap:10px}.menu-nav{display:flex;gap:10px;align-items:center}.menu-nav button{background:rgba(94,234,212,.12);border:1px solid rgba(94,234,212,.28);color:var(--accent);padding:8px 16px;border-radius:999px;cursor:pointer;font-weight:600;font-size:.9rem;transition:all .2s ease}.menu-nav button:hover:not(:disabled){background:rgba(94,234,212,.25);transform:scale(1.05)}.menu-nav button:disabled{opacity:.35;cursor:not-allowed;transform:none}.menu-week-label{color:var(--muted);font-size:.95rem;font-weight:600}
-.menu-grid{display:grid;grid-template-columns:repeat(5,minmax(220px,1fr));gap:14px;overflow-x:auto;padding-bottom:10px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}.menu-day-card{background:linear-gradient(180deg,rgba(24,34,64,.88),rgba(18,26,50,.92));border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow)}.menu-day-header{background:linear-gradient(135deg,rgba(94,234,212,.15),rgba(96,165,250,.12));padding:10px 12px;border-radius:10px;margin-bottom:12px;text-align:center}.menu-day-name{font-weight:700;font-size:1.05rem;color:var(--accent)}.menu-day-date{font-size:.8rem;color:var(--muted);margin-top:3px}.menu-option{margin-bottom:12px;padding:12px;border-radius:10px;border-left:4px solid}.menu-a{background:rgba(96,165,250,.08);border-left-color:var(--accent2)}.menu-b{background:rgba(251,146,60,.08);border-left-color:var(--accent3)}.menu-label{font-weight:700;font-size:.9rem;margin-bottom:8px;display:flex;align-items:center;gap:6px}.menu-a .menu-label{color:var(--accent2)}.menu-b .menu-label{color:var(--accent3)}.menu-items{list-style:none}.menu-items li{padding:5px 0;font-size:.88rem;color:var(--text);border-bottom:1px dashed rgba(148,163,184,.12)}.menu-items li:last-child{border-bottom:none}.menu-loading{grid-column:1/-1;text-align:center;padding:40px;color:var(--muted);font-size:1.1rem}.menu-error{grid-column:1/-1;text-align:center;padding:40px;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.25);border-radius:12px;color:#fca5a5;font-size:1rem}.today-highlight{border:2px solid var(--accent);box-shadow:0 0 20px rgba(94,234,212,.3),var(--shadow)}
-@media(max-width:900px){.menu-grid{grid-template-columns:repeat(5,minmax(220px,1fr))}}
-@media(max-width:720px){.wrap{width:min(100% - 24px,1280px);margin-top:20px}header{flex-direction:column;align-items:flex-start}.notes{grid-template-columns:1fr}.panel{border-radius:16px}.menu-header{flex-direction:column;align-items:flex-start}.menu-grid{grid-template-columns:repeat(5,minmax(220px,1fr));overflow-x:auto;padding-bottom:10px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}}
+.menu-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}.menu-day-card{background:linear-gradient(180deg,rgba(24,34,64,.88),rgba(18,26,50,.92));border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow)}.menu-day-header{background:linear-gradient(135deg,rgba(94,234,212,.15),rgba(96,165,250,.12));padding:10px 12px;border-radius:10px;margin-bottom:12px;text-align:center}.menu-day-name{font-weight:700;font-size:1.05rem;color:var(--accent)}.menu-day-date{font-size:.8rem;color:var(--muted);margin-top:3px}.menu-option{margin-bottom:12px;padding:12px;border-radius:10px;border-left:4px solid}.menu-a{background:rgba(96,165,250,.08);border-left-color:var(--accent2)}.menu-b{background:rgba(251,146,60,.08);border-left-color:var(--accent3)}.menu-label{font-weight:700;font-size:.9rem;margin-bottom:8px;display:flex;align-items:center;gap:6px}.menu-a .menu-label{color:var(--accent2)}.menu-b .menu-label{color:var(--accent3)}.menu-items{list-style:none}.menu-items li{padding:5px 0;font-size:.88rem;color:var(--text);border-bottom:1px dashed rgba(148,163,184,.12)}.menu-items li:last-child{border-bottom:none}.menu-loading{grid-column:1/-1;text-align:center;padding:40px;color:var(--muted);font-size:1.1rem}.menu-error{grid-column:1/-1;text-align:center;padding:40px;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.25);border-radius:12px;color:#fca5a5;font-size:1rem}.today-highlight{border:2px solid var(--accent);box-shadow:0 0 20px rgba(94,234,212,.3),var(--shadow)}
+@media(max-width:900px){.menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.wrap{width:min(100% - 24px,1280px);margin-top:20px}header{flex-direction:column;align-items:flex-start}.notes{grid-template-columns:1fr}.panel{border-radius:16px}.menu-grid{grid-template-columns:1fr}.menu-header{flex-direction:column;align-items:flex-start}}
 </style></head><body>
-<main class="wrap"><header><div class="brand"><div class="mark">K26</div><div><h1>Köböl 2026 1.B Osztály</h1><p class="sub">Órarend</p></div></div><div class="week-label">2026/2027-es tanév</div></header>
-<section class="panel" aria-label="Heti órarend"><table><thead><tr><th>Óra / idő</th><th>Hétfő</th><th>Kedd</th><th>Szerda</th><th>Csütörtök</th><th>Péntek</th></tr></thead><tbody>
-<tr><td class="period">1.<br>8:00–8:45</td><td><div class="lesson">&#128290; Matek</div></td><td><div class="lesson">&#128290; Matek</div></td><td><div class="lesson">&#128290; Matek</div></td><td><div class="lesson">&#128290; Matek</div></td><td><div class="lesson">&#127744; Etika/Hittan</div></td></tr><tr><td class="period">2.<br>8:55–9:40</td><td><div class="lesson">&#128214; Olvasás</div></td><td><div class="lesson">&#128214; Olvasás</div></td><td><div class="lesson">&#128214; Olvasás</div></td><td><div class="lesson">&#128214; Olvasás</div></td><td><div class="lesson">&#128214; Olvasás</div></td></tr><tr><td class="period">3.<br>9:55–10:40</td><td><div class="lesson">&#128221; Írás</div></td><td><div class="lesson">&#128221; Írás</div></td><td><div class="lesson">&#127954; Jégkorong/Hoki</div></td><td><div class="lesson">&#128221; Írás</div></td><td><div class="lesson">&#128221; Írás</div></td></tr><tr><td class="period">4.<br>10:55–11:40</td><td><div class="lesson">&#127925; Ének</div></td><td><div class="lesson">&#127939; Tesi</div></td><td><div class="lesson">&#127954; Jégkorong/Hoki</div></td><td><div class="lesson">&#127925; Ének</div></td><td><div class="lesson">&#129669; Technika</div></td></tr><tr><td class="period">5.<br>12:00–12:45</td><td><div class="lesson">&#127939; Tesi</div></td><td><span class="empty">—</span></td><td><div class="lesson">&#127912; Rajz</div></td><td><div class="lesson">&#127912; Rajz</div></td><td><span class="empty">—</span></td></tr><tr><td class="period">6.<br>13:05–13:45</td><td><div class="lesson">&#129496; Tesi (jóga)</div></td><td><span class="empty">—</span></td><td><span class="empty">—</span></td><td><span class="empty">—</span></td><td><span class="empty">—</span></td></tr><tr><td class="period lunch">Ebéd</td><td class="lunch">13:45–14:05</td><td class="lunch">12:10–12:35</td><td class="lunch">13:15–13:35</td><td class="lunch">13:15–13:35</td><td class="lunch">12:45–13:05</td></tr></tbody></table></section>
-<section class="menu-section" aria-label="Heti étlap"><div class="menu-header"><div class="menu-title">🍽️ Heti Étlap</div><div class="menu-nav"><button id="menuPrevWeek">← Előző</button><span class="menu-week-label" id="menuWeekLabel">Betöltés...</span><button id="menuNextWeek">Következő →</button></div></div><div class="menu-grid" id="menuGrid"><div class="menu-loading">Étlap betöltése...</div></div></section>
-<section class="notes" aria-label="Tájékoztatók"><article class="note important"><h2>Fontos tudnivalók</h2><p>Indulnak a különórák. Kérjük, hogy az üzenőfüzet elején jelezzétek, melyikre jelentkeztek. Panka ez alapján tudja küldeni a gyerekeket órákra.</p><p>Akik 16 órára érkeznek gyermekükért, legyenek szívesek az iskola bejárata előtti lépcső alján várakozni.</p></article><article class="note info"><h2>További információk</h2><p>15 ezer forint / gyerek az első fél évre az osztálypénz.</p><p><a href="https://docs.google.com/spreadsheets/d/1w8RkZwuixbSs6wVpwVnWuN35ZJfMyVjm" target="_blank" rel="noopener noreferrer">Befizetések és kiadások</a></p><p><a href="https://drive.google.com/drive/u/1/folders/1tklwqT_okkaIxpWdRn1xy6REYTPUwrwj" target="_blank" rel="noopener noreferrer">Számlák (Google Drive)</a></p></article><article class="note activities"><h2>Különórák</h2><p>&#127952; Labdás foglalkozás: Kedd és Csütörtök 14:00–15:00</p><p>Ács Máté &#128241; <a href="tel:+36709677000">+36709677000</a> &#128231; <a href="mailto:acs.mate@adamjeno.com">acs.mate@adamjeno.com</a></p><p>&#9917; Labdarúgás: Hétfő és Szerda 14:00–15:00</p><p>&#127936; Kosár: Kedd 16:00–17:00, Csütörtök 15:00–16:00</p><p>&#129355; Judo: Kedd és Csütörtök 16:15–17:00</p></article><article class="note hockey"><h2>&#127954; Jégkorong / Hoki</h2><p><a href="https://docs.google.com/spreadsheets/d/1KWawPp1VbW1NrvgweUON0Vu6XVOEK4Ca" target="_blank" rel="noopener noreferrer">Szülői Kíséret Link</a></p><p>Minden szerdán a 3. és 4. órában jégkorong.</p><p>A sátorban körülbelül 1 fok van, ezért a kísérő szülők is melegen öltözzenek.</p></article></section><footer>Köböl 2026 · 1.B Osztály · Site Admin: Nguyen Quang Ngoc (Nándi)</footer></main>
+<main class="wrap">
+<header><div class="brand"><div class="mark">K26</div><div><h1>Köböl 2026 1.B Osztály</h1><p class="sub">Órarend</p></div></div><div class="week-label">2026/2027-es tanév</div></header>
+<section class="panel" aria-label="Heti órarend"><table>
+<thead><tr><th>Óra / idő</th><th>Hétfő</th><th>Kedd</th><th>Szerda</th><th>Csütörtök</th><th>Péntek</th></tr></thead><tbody>
+<tr><td class="period">1.<br>8:00–8:45</td><td><div class="lesson">&#128290; Matek</div></td><td><div class="lesson">&#128290; Matek</div></td><td><div class="lesson">&#128290; Matek</div></td><td><div class="lesson">&#128290; Matek</div></td><td><div class="lesson">&#127744; Etika/Hittan</div></td></tr>
+<tr><td class="period">2.<br>8:55–9:40</td><td><div class="lesson">&#128214; Olvasás</div></td><td><div class="lesson">&#128214; Olvasás</div></td><td><div class="lesson">&#128214; Olvasás</div></td><td><div class="lesson">&#128214; Olvasás</div></td><td><div class="lesson">&#128214; Olvasás</div></td></tr>
+<tr><td class="period">3.<br>9:55–10:40</td><td><div class="lesson">&#128221; Írás</div></td><td><div class="lesson">&#128221; Írás</div></td><td><div class="lesson">&#127954; Jégkorong/Hoki </div></td><td><div class="lesson">&#128221; Írás</div></td><td><div class="lesson">&#128221; Írás</div></td></tr>
+<tr><td class="period">4.<br>10:55–11:40</td><td><div class="lesson">&#127925; Ének</div></td><td><div class="lesson">&#127939; Tesi</div></td><td><div class="lesson">&#127954; Jégkorong/Hoki </div></td><td><div class="lesson">&#127925; Ének</div></td><td><div class="lesson">&#129669; Technika</div></td></tr>
+<tr><td class="period">5.<br>12:00–12:45</td><td><div class="lesson">&#127939; Tesi</div></td><td><span class="empty">—</span></td><td><div class="lesson">&#127912; Rajz</div></td><td><div class="lesson">&#127912; Rajz</div></td><td><span class="empty">—</span></td></tr>
+<tr><td class="period">6.<br>13:05–13:45</td><td><div class="lesson">&#129496; Tesi (jóga)</div></td><td><span class="empty">—</span></td><td><span class="empty">—</span></td><td><span class="empty">—</span></td><td><span class="empty">—</span></td></tr>
+<tr><td class="period lunch">Ebéd</td><td class="lunch">13:45–14:05</td><td class="lunch">12:10–12:35</td><td class="lunch">13:15–13:35</td><td class="lunch">13:15–13:35</td><td class="lunch">12:45–13:05</td></tr>
+</tbody></table></section>
+<section class="menu-section" aria-label="Heti étlap"><div class="menu-header"><div class="menu-title">🍽️ Heti Étlap</div><div class="menu-nav"><button id="menuPrevWeek" aria-label="Előző hét">← Előző</button><span class="menu-week-label" id="menuWeekLabel">Betöltés...</span><button id="menuNextWeek" aria-label="Következő hét">Következő →</button></div></div><div class="menu-grid" id="menuGrid"><div class="menu-loading">Étlap betöltése...</div></div></section>
+<section class="notes" aria-label="Tájékoztatók">
+<article class="note important"><h2>Fontos tudnivalók</h2>
+<p> Indulnak a különórák. Kérjük, hogy az üzenőfüzet elején jelezzétek, melyikre jelentkeztek. Panka ez alapján tudja küldeni a gyerekeket órákra.</p>
+<p> Akik 16 órára érkeznek gyermekükért, legyenek szívesek az iskola bejárata előtti lépcső alján várakozni. Kérem, hogy ezzel segítsétek a gyermekek biztonságos és zavartalan távozását.</p></article>
+<article class="note info"><h2>További információk</h2>
+<p> 15 ezer forint / gyerek az első fél évre az osztálypénz, emailben a fizetési tudnivalók.</p>
+<p> Osztály nyomtatója működik, toner megérkezett, irodai papír is van, köszönjük a felajánlásokat ezzel kapcsolatban. </p>
+<p> *** Fontos Linkek *** </p>
+<p><a href="https://docs.google.com/spreadsheets/d/1w8RkZwuixbSs6wVpwVnWuN35ZJfMyVjm" target="_blank" rel="noopener noreferrer"> Befizetések, és kiadások </a></p>
+<p><a href="https://drive.google.com/drive/u/1/folders/1tklwqT_okkaIxpWdRn1xy6REYTPUwrwj" target="_blank" rel="noopener noreferrer"> Számlák (Google Drive) </a></p></article>
+<article class="note activities"><h2>Különórák</h2>
+<p> &#127952; Labdás foglalkozás: Kedd és Csütörtök 14:00 - 15:00</p>
+<p> Ács Máté &#128241; <a href="tel:+36709677000">+36709677000</a> &#128231; <a href="mailto:acs.mate@adamjeno.com">acs.mate@adamjeno.com</a></p>
+<p> &#9917; Labdarúgás: Hétfő és Szerda 14:00 - 15:00</p><p> Tóth Zoltán - Üzenőfüzetes jelzés</p>
+<p> &#127873; Kézműves apróséf: Kedd 14:00 - 15:00</p><p> Elekes-Prónay Zita &#128231; <a href="mailto:elekes-pronay.zita@adamjeno.com">elekes-pronay.zita@adamjeno.com</a></p>
+<p> &#127936; Kosár: Kedd 16:00-17:00, Csütörtök 15:00-16:00</p><p> Kelemen Barbara &#128241; <a href="tel:+36202617496">+36202617496</a> &#128231; <a href="mailto:barbaraanna2002@gmail.com">barbaraanna2002@gmail.com</a></p>
+<p> &#129355; Kyokushin Karate: Hétfő és Szerda 14:00 - 15:00</p><p> Váczi Zoltán &#128241; <a href="tel:+36302298938">+36302298938</a> &#128231; <a href="mailto:vaczi.zoltan@gmail.com">vaczi.zoltan@gmail.com</a></p>
+<p> &#129355; Judo: Kedd és Csütörtök 16:15-17:00</p><p> Csanád &#128241; <a href="tel:+36307324820">+36307324820</a> &#128231; <a href="mailto:ori.csanad@gmail.com">ori.csanad@gmail.com</a></p>
+<p> &#128131; Akrobatikus rock &amp; roll: Hétfő és Szerda 14:00-14:45</p><p> Rovó Orsolya &#128241; <a href="tel:+36309406136">+36309406136</a> &#128231; <a href="https://www.rockandmagic.hu" target="_blank" rel="noopener noreferrer"> www.rockandmagic.hu</a></p>
+<p> &#128131; Cheerleading: Szerda 16:00-17:00</p><p> BEAC Cheerleading Utánpótlás &#128241; <a href="tel:+36306748847">+36306748847</a> &#128231; <a href="mailto:cheer@beac.elte.hu">cheer@beac.elte.hu</a></p></article>
+<article class="note hockey"><h2>&#127954; Jégkorong / Hoki</h2>
+<p><a href="https://docs.google.com/spreadsheets/d/1KWawPp1VbW1NrvgweUON0Vu6XVOEK4Ca" target="_blank" rel="noopener noreferrer"> Szülői Kíséret Link</a></p>
+<p>Minden Szerdán a 3. és 4. órában Jégkorong/Hoki a gyerekeknek</p>
+<p> Második óra után indulnak Noémi és Panka nénivel --- Indulás: Villányi út, a Pető Intézet előtti buszmegálló --- 10:20 Indulás a pályára --- 10:40 Érkezés a pályához, átöltözés --- 11:00 - 11:50 Korcsolyaoktatás --- 12:10 - 12:30 Visszaindulás és Érkezés az iskolához</p>
+<p>Alkalmanként minimum 2 szülőnek kellene jönnie (az első néhány alkalommal jó lenne, ha ennél többen lennénk)</p>
+<p>Kísérő szülők nem utazhatnak a busszal, nekik közvetlenül a Tüskesátorhoz kellene érkezniük (fehér kerítés, fehér kapu)</p>
+<p>A lábméretet be kellene írni az üzenőbe</p><p>Korcsolyát és a sisakot kapnak a helyszínen</p>
+<p>Vízhatlan overál vagy sídzseki + sínadrág, hátizsákban, ne külön szatyorban</p>
+<p>Síkesztyű kötelező, anélkül nem mehetnek a jégre. Vékony sapka ajánlott. </p>
+<p>Kulacs, kis harapnivaló, pl. müzliszelet</p><p>A sátorban kb. 1 fok van, ezért a kísérő szülők is melegen öltözzenek</p></article>
+</section><footer>Köböl 2026 · 1.B Osztály · Site Admin: Nguyen Quang Ngoc (Nándi) </footer></main>
 <script>
-const menuData={weeks:[{weekId:'2026-W40',weekLabel:'2026. szeptember 28. – október 2.',weekStart:'2026-09-28',days:{Monday:{date:'szeptember 28.',isoDate:'2026-09-28',menuA:['N/A','N/A','N/A'],menuB:['N/A','N/A','N/A']},Tuesday:{date:'szeptember 29.',isoDate:'2026-09-29',menuA:['N/A','N/A','N/A'],menuB:['N/A','N/A','N/A']},Wednesday:{date:'szeptember 30.',isoDate:'2026-09-30',menuA:['N/A','N/A','N/A'],menuB:['Bazsalikomos paradicsomleves','Parajos penne sonkával sajttal sütve','Narancs']},Thursday:{date:'október 1.',isoDate:'2026-10-01',menuA:['Húsgombócleves zöldségekkel','Lecsós sertésszelet, Hagymás törtburgonya','Csemege uborka'],menuB:['Húsgombócleves zöldségekkel','Falafel, Teljes kiőrlésű kenyér','Zöldbabfőzelék, Fasírtgolyó']},Friday:{date:'október 2.',isoDate:'2026-10-02',menuA:['Tejfölös sárgaborsó leves','Szilvatöltelékes gombóc','Mákos-fahéjas porcukor'],menuB:['Tejfölös sárgaborsó leves','Sajtkrémes galuska','Pirított hagyma']} }},{weekId:'2026-W41',weekLabel:'2026. október 5. – október 9.',weekStart:'2026-10-05',days:{Monday:{date:'október 5.',isoDate:'2026-10-05',menuA:['Krémsajtos karfiolkrémleves + Tortilla chips','Panírozott halrudak + Rizi-bizi','Alma'],menuB:['Krémsajtos karfiolkrémleves + Tortilla chips','Sonkás mac and cheese','Alma']},Tuesday:{date:'október 6.',isoDate:'2026-10-06',menuA:['Vegyes gyümölcsleves','Fokhagymás sertés aprópecsenye + Tepsis burgonya','Csemege uborka'],menuB:['Vegyes gyümölcsleves','Koreai csirkeragu + Párolt jázmin rizs','Pirított zöldségek']},Wednesday:{date:'október 7.',isoDate:'2026-10-07',menuA:['Zöldségleves reszelt tésztával','Csikós sertéstokány','Párolt bulgur borsóval'],menuB:['Zöldségleves reszelt tésztával','Rántott csirkemell + Burgonyapüré','Csemege uborka']},Thursday:{date:'október 8.',isoDate:'2026-10-08',menuA:['Tejfölös burgonyaleves + Teljes kiőrlésű kenyér','Rakott brokkoli sertéshúsból füstölt sajttal','N/A'],menuB:['Tejfölös burgonyaleves + Teljes kiőrlésű kenyér','Magyaros sertésszelet és Cukkínifasírt','Lencsefőzelék']},Friday:{date:'október 9.',isoDate:'2026-10-09',menuA:['Legényfogó leves sertéshússal + Teljes kiőrlésű kenyér','Gránátos kocka','Céklasaláta'],menuB:['Legényfogó leves sertéshússal + Teljes kiőrlésű kenyér','Tejberizs','Erdei gyümölcsös ragu']}}}]};
-let currentWeekIndex=0;const dayOrder=['Monday','Tuesday','Wednesday','Thursday','Friday'];const dayNames={Monday:'Hétfő',Tuesday:'Kedd',Wednesday:'Szerda',Thursday:'Csütörtök',Friday:'Péntek'};
-function todayISO(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
-function findCurrentWeek(){const today=todayISO();const i=menuData.weeks.findIndex(w=>today>=w.weekStart&&today<=new Date(new Date(w.weekStart+'T12:00:00').getTime()+6*86400000).toISOString().slice(0,10));return i<0?0:i}
-function escapeHTML(v){const e=document.createElement('span');e.textContent=String(v);return e.innerHTML}
-function renderMenu(){const w=menuData.weeks[currentWeekIndex];document.getElementById('menuWeekLabel').textContent=w.weekLabel;const today=todayISO();document.getElementById('menuGrid').innerHTML=dayOrder.map(day=>{const d=w.days[day];if(!d)return '';const todayClass=d.isoDate===today?'today-highlight':'';return `<div class="menu-day-card ${todayClass}"><div class="menu-day-header"><div class="menu-day-name">${dayNames[day]}${d.isoDate===today?' <span style="color:var(--accent);font-size:.75rem">● MA</span>':''}</div><div class="menu-day-date">${escapeHTML(d.date)}</div></div><div class="menu-option menu-a"><div class="menu-label">🅰️ A menü</div><ul class="menu-items">${d.menuA.map(x=>`<li>${escapeHTML(x)}</li>`).join('')}</ul></div><div class="menu-option menu-b"><div class="menu-label">🅱️ B menü</div><ul class="menu-items">${d.menuB.map(x=>`<li>${escapeHTML(x)}</li>`).join('')}</ul></div></div>`}).join('');document.getElementById('menuPrevWeek').disabled=currentWeekIndex===0;document.getElementById('menuNextWeek').disabled=currentWeekIndex===menuData.weeks.length-1}
-document.getElementById('menuPrevWeek').onclick=()=>{if(currentWeekIndex>0){currentWeekIndex--;renderMenu()}};document.getElementById('menuNextWeek').onclick=()=>{if(currentWeekIndex<menuData.weeks.length-1){currentWeekIndex++;renderMenu()}};currentWeekIndex=findCurrentWeek();renderMenu();
+const menuData = {
+  "weeks": [
+    {
+      "weekId": "2026-W40",
+      "weekLabel": "2026. szeptember 28. – október 2.",
+      "weekStart": "2026-09-28",
+      "days": {
+        "Monday": {
+          "date": "szeptember 28.",
+          "isoDate": "2026-09-28",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "szeptember 29.",
+          "isoDate": "2026-09-29",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "szeptember 30.",
+          "isoDate": "2026-09-30",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "Bazsalikomos paradicsomleves",
+            "Parajos penne sonkával sajttal sütve",
+            "Narancs"
+          ]
+        },
+        "Thursday": {
+          "date": "október 1.",
+          "isoDate": "2026-10-01",
+          "menuA": [
+            "Húsgombócleves zöldségekkel",
+            "Lecsós sertésszelet, Hagymás törtburgonya",
+            "Csemege uborka"
+          ],
+          "menuB": [
+            "Húsgombócleves zöldségekkel",
+            "Falafel, Teljes kiőrlésű kenyér",
+            "Zöldbabfőzelék, Fasírtgolyó"
+          ]
+        },
+        "Friday": {
+          "date": "október 2.",
+          "isoDate": "2026-10-02",
+          "menuA": [
+            "Tejfölös sárgaborsó leves",
+            "Szilvatöltelékes gombóc",
+            "Mákos-fahéjas porcukor"
+          ],
+          "menuB": [
+            "Tejfölös sárgaborsó leves",
+            "Sajtkrémes galuska",
+            "Pirított hagyma"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2026-W41",
+      "weekLabel": "2026. október 5. – október 9.",
+      "weekStart": "2026-10-05",
+      "days": {
+        "Monday": {
+          "date": "október 5.",
+          "isoDate": "2026-10-05",
+          "menuA": [
+            "Krémsajtos karfiolkrémleves + Tortilla chips",
+            "Panírozott halrudak + Rizi-bizi",
+            "Alma"
+          ],
+          "menuB": [
+            "Krémsajtos karfiolkrémleves + Tortilla chips",
+            "Sonkás mac and cheese",
+            "Alma"
+          ]
+        },
+        "Tuesday": {
+          "date": "október 6.",
+          "isoDate": "2026-10-06",
+          "menuA": [
+            "Vegyes gyümölcsleves",
+            "Fokhagymás sertés aprópecsenye + Tepsis burgonya",
+            "Csemege uborka"
+          ],
+          "menuB": [
+            "Vegyes gyümölcsleves",
+            "Koreai csirkeragu + Párolt jázmin rizs",
+            "Pirított zöldségek"
+          ]
+        },
+        "Wednesday": {
+          "date": "október 7.",
+          "isoDate": "2026-10-07",
+          "menuA": [
+            "Zöldségleves reszelt tésztával",
+            "Csikós sertéstokány",
+            "Párolt bulgur borsóval"
+          ],
+          "menuB": [
+            "Zöldségleves reszelt tésztával",
+            "Rántott csirkemell + Burgonyapüré",
+            "Csemege uborka"
+          ]
+        },
+        "Thursday": {
+          "date": "október 8.",
+          "isoDate": "2026-10-08",
+          "menuA": [
+            "Tejfölös burgonyaleves + Teljes kiőrlésű kenyér",
+            "Rakott brokkoli sertéshúsból füstölt sajttal",
+            "N/A"
+          ],
+          "menuB": [
+            "Tejfölös burgonyaleves + Teljes kiőrlésű kenyér",
+            "Magyaros sertésszelet és Cukkínifasírt",
+            "Lencsefőzelék"
+          ]
+        },
+        "Friday": {
+          "date": "október 9.",
+          "isoDate": "2026-10-09",
+          "menuA": [
+            "Legényfogó leves sertéshússal + Teljes kiőrlésű kenyér",
+            "Gránátos kocka",
+            "Céklasaláta"
+          ],
+          "menuB": [
+            "Legényfogó leves sertéshússal + Teljes kiőrlésű kenyér",
+            "Tejberizs",
+            "Erdei gyümölcsös ragu"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2026-W42",
+      "weekLabel": "2026. október 12. – október 16.",
+      "weekStart": "2026-10-12",
+      "days": {
+        "Monday": {
+          "date": "október 12.",
+          "isoDate": "2026-10-12",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "október 13.",
+          "isoDate": "2026-10-13",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "október 14.",
+          "isoDate": "2026-10-14",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "október 15.",
+          "isoDate": "2026-10-15",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "október 16.",
+          "isoDate": "2026-10-16",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2026-W43",
+      "weekLabel": "2026. október 19. – október 23.",
+      "weekStart": "2026-10-19",
+      "days": {
+        "Monday": {
+          "date": "október 19.",
+          "isoDate": "2026-10-19",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "október 20.",
+          "isoDate": "2026-10-20",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "október 21.",
+          "isoDate": "2026-10-21",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "október 22.",
+          "isoDate": "2026-10-22",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "október 23.",
+          "isoDate": "2026-10-23",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2026-W44",
+      "weekLabel": "2026. október 26. – október 30.",
+      "weekStart": "2026-10-26",
+      "days": {
+        "Monday": {
+          "date": "október 26.",
+          "isoDate": "2026-10-26",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "október 27.",
+          "isoDate": "2026-10-27",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "október 28.",
+          "isoDate": "2026-10-28",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "október 29.",
+          "isoDate": "2026-10-29",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "október 30.",
+          "isoDate": "2026-10-30",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2026-W45",
+      "weekLabel": "2026. november 2. – november 6.",
+      "weekStart": "2026-11-02",
+      "days": {
+        "Monday": {
+          "date": "november 2.",
+          "isoDate": "2026-11-02",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "november 3.",
+          "isoDate": "2026-11-03",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "november 4.",
+          "isoDate": "2026-11-04",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "november 5.",
+          "isoDate": "2026-11-05",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "november 6.",
+          "isoDate": "2026-11-06",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2026-W46",
+      "weekLabel": "2026. november 9. – november 13.",
+      "weekStart": "2026-11-09",
+      "days": {
+        "Monday": {
+          "date": "november 9.",
+          "isoDate": "2026-11-09",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "november 10.",
+          "isoDate": "2026-11-10",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "november 11.",
+          "isoDate": "2026-11-11",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "november 12.",
+          "isoDate": "2026-11-12",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "november 13.",
+          "isoDate": "2026-11-13",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2026-W47",
+      "weekLabel": "2026. november 16. – november 20.",
+      "weekStart": "2026-11-16",
+      "days": {
+        "Monday": {
+          "date": "november 16.",
+          "isoDate": "2026-11-16",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "november 17.",
+          "isoDate": "2026-11-17",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "november 18.",
+          "isoDate": "2026-11-18",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "november 19.",
+          "isoDate": "2026-11-19",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "november 20.",
+          "isoDate": "2026-11-20",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2026-W48",
+      "weekLabel": "2026. november 23. – november 27.",
+      "weekStart": "2026-11-23",
+      "days": {
+        "Monday": {
+          "date": "november 23.",
+          "isoDate": "2026-11-23",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "november 24.",
+          "isoDate": "2026-11-24",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "november 25.",
+          "isoDate": "2026-11-25",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "november 26.",
+          "isoDate": "2026-11-26",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "november 27.",
+          "isoDate": "2026-11-27",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2026-W49",
+      "weekLabel": "2026. november 30. – december 4.",
+      "weekStart": "2026-11-30",
+      "days": {
+        "Monday": {
+          "date": "november 30.",
+          "isoDate": "2026-11-30",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "december 1.",
+          "isoDate": "2026-12-01",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "december 2.",
+          "isoDate": "2026-12-02",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "december 3.",
+          "isoDate": "2026-12-03",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "december 4.",
+          "isoDate": "2026-12-04",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2026-W50",
+      "weekLabel": "2026. december 7. – december 11.",
+      "weekStart": "2026-12-07",
+      "days": {
+        "Monday": {
+          "date": "december 7.",
+          "isoDate": "2026-12-07",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "december 8.",
+          "isoDate": "2026-12-08",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "december 9.",
+          "isoDate": "2026-12-09",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "december 10.",
+          "isoDate": "2026-12-10",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "december 11.",
+          "isoDate": "2026-12-11",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2026-W51",
+      "weekLabel": "2026. december 14. – december 18.",
+      "weekStart": "2026-12-14",
+      "days": {
+        "Monday": {
+          "date": "december 14.",
+          "isoDate": "2026-12-14",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "december 15.",
+          "isoDate": "2026-12-15",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "december 16.",
+          "isoDate": "2026-12-16",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "december 17.",
+          "isoDate": "2026-12-17",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "december 18.",
+          "isoDate": "2026-12-18",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2026-W52",
+      "weekLabel": "2026. december 21. – december 25.",
+      "weekStart": "2026-12-21",
+      "days": {
+        "Monday": {
+          "date": "december 21.",
+          "isoDate": "2026-12-21",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "december 22.",
+          "isoDate": "2026-12-22",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "december 23.",
+          "isoDate": "2026-12-23",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "december 24.",
+          "isoDate": "2026-12-24",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "december 25.",
+          "isoDate": "2026-12-25",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2026-W53",
+      "weekLabel": "2026. december 28. – 2027. január 1.",
+      "weekStart": "2026-12-28",
+      "days": {
+        "Monday": {
+          "date": "december 28.",
+          "isoDate": "2026-12-28",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "december 29.",
+          "isoDate": "2026-12-29",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "december 30.",
+          "isoDate": "2026-12-30",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "december 31.",
+          "isoDate": "2026-12-31",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "január 1.",
+          "isoDate": "2027-01-01",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W01",
+      "weekLabel": "2027. január 4. – január 8.",
+      "weekStart": "2027-01-04",
+      "days": {
+        "Monday": {
+          "date": "január 4.",
+          "isoDate": "2027-01-04",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "január 5.",
+          "isoDate": "2027-01-05",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "január 6.",
+          "isoDate": "2027-01-06",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "január 7.",
+          "isoDate": "2027-01-07",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "január 8.",
+          "isoDate": "2027-01-08",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W02",
+      "weekLabel": "2027. január 11. – január 15.",
+      "weekStart": "2027-01-11",
+      "days": {
+        "Monday": {
+          "date": "január 11.",
+          "isoDate": "2027-01-11",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "január 12.",
+          "isoDate": "2027-01-12",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "január 13.",
+          "isoDate": "2027-01-13",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "január 14.",
+          "isoDate": "2027-01-14",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "január 15.",
+          "isoDate": "2027-01-15",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W03",
+      "weekLabel": "2027. január 18. – január 22.",
+      "weekStart": "2027-01-18",
+      "days": {
+        "Monday": {
+          "date": "január 18.",
+          "isoDate": "2027-01-18",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "január 19.",
+          "isoDate": "2027-01-19",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "január 20.",
+          "isoDate": "2027-01-20",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "január 21.",
+          "isoDate": "2027-01-21",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "január 22.",
+          "isoDate": "2027-01-22",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W04",
+      "weekLabel": "2027. január 25. – január 29.",
+      "weekStart": "2027-01-25",
+      "days": {
+        "Monday": {
+          "date": "január 25.",
+          "isoDate": "2027-01-25",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "január 26.",
+          "isoDate": "2027-01-26",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "január 27.",
+          "isoDate": "2027-01-27",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "január 28.",
+          "isoDate": "2027-01-28",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "január 29.",
+          "isoDate": "2027-01-29",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W05",
+      "weekLabel": "2027. február 1. – február 5.",
+      "weekStart": "2027-02-01",
+      "days": {
+        "Monday": {
+          "date": "február 1.",
+          "isoDate": "2027-02-01",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "február 2.",
+          "isoDate": "2027-02-02",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "február 3.",
+          "isoDate": "2027-02-03",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "február 4.",
+          "isoDate": "2027-02-04",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "február 5.",
+          "isoDate": "2027-02-05",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W06",
+      "weekLabel": "2027. február 8. – február 12.",
+      "weekStart": "2027-02-08",
+      "days": {
+        "Monday": {
+          "date": "február 8.",
+          "isoDate": "2027-02-08",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "február 9.",
+          "isoDate": "2027-02-09",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "február 10.",
+          "isoDate": "2027-02-10",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "február 11.",
+          "isoDate": "2027-02-11",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "február 12.",
+          "isoDate": "2027-02-12",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W07",
+      "weekLabel": "2027. február 15. – február 19.",
+      "weekStart": "2027-02-15",
+      "days": {
+        "Monday": {
+          "date": "február 15.",
+          "isoDate": "2027-02-15",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "február 16.",
+          "isoDate": "2027-02-16",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "február 17.",
+          "isoDate": "2027-02-17",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "február 18.",
+          "isoDate": "2027-02-18",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "február 19.",
+          "isoDate": "2027-02-19",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W08",
+      "weekLabel": "2027. február 22. – február 26.",
+      "weekStart": "2027-02-22",
+      "days": {
+        "Monday": {
+          "date": "február 22.",
+          "isoDate": "2027-02-22",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "február 23.",
+          "isoDate": "2027-02-23",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "február 24.",
+          "isoDate": "2027-02-24",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "február 25.",
+          "isoDate": "2027-02-25",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "február 26.",
+          "isoDate": "2027-02-26",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W09",
+      "weekLabel": "2027. március 1. – március 5.",
+      "weekStart": "2027-03-01",
+      "days": {
+        "Monday": {
+          "date": "március 1.",
+          "isoDate": "2027-03-01",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "március 2.",
+          "isoDate": "2027-03-02",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "március 3.",
+          "isoDate": "2027-03-03",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "március 4.",
+          "isoDate": "2027-03-04",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "március 5.",
+          "isoDate": "2027-03-05",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W10",
+      "weekLabel": "2027. március 8. – március 12.",
+      "weekStart": "2027-03-08",
+      "days": {
+        "Monday": {
+          "date": "március 8.",
+          "isoDate": "2027-03-08",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "március 9.",
+          "isoDate": "2027-03-09",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "március 10.",
+          "isoDate": "2027-03-10",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "március 11.",
+          "isoDate": "2027-03-11",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "március 12.",
+          "isoDate": "2027-03-12",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W11",
+      "weekLabel": "2027. március 15. – március 19.",
+      "weekStart": "2027-03-15",
+      "days": {
+        "Monday": {
+          "date": "március 15.",
+          "isoDate": "2027-03-15",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "március 16.",
+          "isoDate": "2027-03-16",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "március 17.",
+          "isoDate": "2027-03-17",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "március 18.",
+          "isoDate": "2027-03-18",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "március 19.",
+          "isoDate": "2027-03-19",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W12",
+      "weekLabel": "2027. március 22. – március 26.",
+      "weekStart": "2027-03-22",
+      "days": {
+        "Monday": {
+          "date": "március 22.",
+          "isoDate": "2027-03-22",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "március 23.",
+          "isoDate": "2027-03-23",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "március 24.",
+          "isoDate": "2027-03-24",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "március 25.",
+          "isoDate": "2027-03-25",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "március 26.",
+          "isoDate": "2027-03-26",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W13",
+      "weekLabel": "2027. március 29. – április 2.",
+      "weekStart": "2027-03-29",
+      "days": {
+        "Monday": {
+          "date": "március 29.",
+          "isoDate": "2027-03-29",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "március 30.",
+          "isoDate": "2027-03-30",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "március 31.",
+          "isoDate": "2027-03-31",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "április 1.",
+          "isoDate": "2027-04-01",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "április 2.",
+          "isoDate": "2027-04-02",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W14",
+      "weekLabel": "2027. április 5. – április 9.",
+      "weekStart": "2027-04-05",
+      "days": {
+        "Monday": {
+          "date": "április 5.",
+          "isoDate": "2027-04-05",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "április 6.",
+          "isoDate": "2027-04-06",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "április 7.",
+          "isoDate": "2027-04-07",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "április 8.",
+          "isoDate": "2027-04-08",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "április 9.",
+          "isoDate": "2027-04-09",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W15",
+      "weekLabel": "2027. április 12. – április 16.",
+      "weekStart": "2027-04-12",
+      "days": {
+        "Monday": {
+          "date": "április 12.",
+          "isoDate": "2027-04-12",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "április 13.",
+          "isoDate": "2027-04-13",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "április 14.",
+          "isoDate": "2027-04-14",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "április 15.",
+          "isoDate": "2027-04-15",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "április 16.",
+          "isoDate": "2027-04-16",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W16",
+      "weekLabel": "2027. április 19. – április 23.",
+      "weekStart": "2027-04-19",
+      "days": {
+        "Monday": {
+          "date": "április 19.",
+          "isoDate": "2027-04-19",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "április 20.",
+          "isoDate": "2027-04-20",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "április 21.",
+          "isoDate": "2027-04-21",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "április 22.",
+          "isoDate": "2027-04-22",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "április 23.",
+          "isoDate": "2027-04-23",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W17",
+      "weekLabel": "2027. április 26. – április 30.",
+      "weekStart": "2027-04-26",
+      "days": {
+        "Monday": {
+          "date": "április 26.",
+          "isoDate": "2027-04-26",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "április 27.",
+          "isoDate": "2027-04-27",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "április 28.",
+          "isoDate": "2027-04-28",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "április 29.",
+          "isoDate": "2027-04-29",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "április 30.",
+          "isoDate": "2027-04-30",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W18",
+      "weekLabel": "2027. május 3. – május 7.",
+      "weekStart": "2027-05-03",
+      "days": {
+        "Monday": {
+          "date": "május 3.",
+          "isoDate": "2027-05-03",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "május 4.",
+          "isoDate": "2027-05-04",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "május 5.",
+          "isoDate": "2027-05-05",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "május 6.",
+          "isoDate": "2027-05-06",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "május 7.",
+          "isoDate": "2027-05-07",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W19",
+      "weekLabel": "2027. május 10. – május 14.",
+      "weekStart": "2027-05-10",
+      "days": {
+        "Monday": {
+          "date": "május 10.",
+          "isoDate": "2027-05-10",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "május 11.",
+          "isoDate": "2027-05-11",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "május 12.",
+          "isoDate": "2027-05-12",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "május 13.",
+          "isoDate": "2027-05-13",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "május 14.",
+          "isoDate": "2027-05-14",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W20",
+      "weekLabel": "2027. május 17. – május 21.",
+      "weekStart": "2027-05-17",
+      "days": {
+        "Monday": {
+          "date": "május 17.",
+          "isoDate": "2027-05-17",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "május 18.",
+          "isoDate": "2027-05-18",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "május 19.",
+          "isoDate": "2027-05-19",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "május 20.",
+          "isoDate": "2027-05-20",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "május 21.",
+          "isoDate": "2027-05-21",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W21",
+      "weekLabel": "2027. május 24. – május 28.",
+      "weekStart": "2027-05-24",
+      "days": {
+        "Monday": {
+          "date": "május 24.",
+          "isoDate": "2027-05-24",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "május 25.",
+          "isoDate": "2027-05-25",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "május 26.",
+          "isoDate": "2027-05-26",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "május 27.",
+          "isoDate": "2027-05-27",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "május 28.",
+          "isoDate": "2027-05-28",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W22",
+      "weekLabel": "2027. május 31. – június 4.",
+      "weekStart": "2027-05-31",
+      "days": {
+        "Monday": {
+          "date": "május 31.",
+          "isoDate": "2027-05-31",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "június 1.",
+          "isoDate": "2027-06-01",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "június 2.",
+          "isoDate": "2027-06-02",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "június 3.",
+          "isoDate": "2027-06-03",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "június 4.",
+          "isoDate": "2027-06-04",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W23",
+      "weekLabel": "2027. június 7. – június 11.",
+      "weekStart": "2027-06-07",
+      "days": {
+        "Monday": {
+          "date": "június 7.",
+          "isoDate": "2027-06-07",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "június 8.",
+          "isoDate": "2027-06-08",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "június 9.",
+          "isoDate": "2027-06-09",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "június 10.",
+          "isoDate": "2027-06-10",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "június 11.",
+          "isoDate": "2027-06-11",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W24",
+      "weekLabel": "2027. június 14. – június 18.",
+      "weekStart": "2027-06-14",
+      "days": {
+        "Monday": {
+          "date": "június 14.",
+          "isoDate": "2027-06-14",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "június 15.",
+          "isoDate": "2027-06-15",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "június 16.",
+          "isoDate": "2027-06-16",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "június 17.",
+          "isoDate": "2027-06-17",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "június 18.",
+          "isoDate": "2027-06-18",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W25",
+      "weekLabel": "2027. június 21. – június 25.",
+      "weekStart": "2027-06-21",
+      "days": {
+        "Monday": {
+          "date": "június 21.",
+          "isoDate": "2027-06-21",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "június 22.",
+          "isoDate": "2027-06-22",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "június 23.",
+          "isoDate": "2027-06-23",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "június 24.",
+          "isoDate": "2027-06-24",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "június 25.",
+          "isoDate": "2027-06-25",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    },
+    {
+      "weekId": "2027-W26",
+      "weekLabel": "2027. június 28. – július 2.",
+      "weekStart": "2027-06-28",
+      "days": {
+        "Monday": {
+          "date": "június 28.",
+          "isoDate": "2027-06-28",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Tuesday": {
+          "date": "június 29.",
+          "isoDate": "2027-06-29",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Wednesday": {
+          "date": "június 30.",
+          "isoDate": "2027-06-30",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Thursday": {
+          "date": "július 1.",
+          "isoDate": "2027-07-01",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        },
+        "Friday": {
+          "date": "július 2.",
+          "isoDate": "2027-07-02",
+          "menuA": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ],
+          "menuB": [
+            "N/A",
+            "N/A",
+            "N/A"
+          ]
+        }
+      }
+    }
+  ]
+};
+
+// Edit menuA/menuB directly above. Existing entries are never overwritten.
+menuData.weeks.forEach(week => {
+  Object.values(week.days).forEach(day => {
+    day.menuA ??= ["N/A", "N/A", "N/A"];
+    day.menuB ??= ["N/A", "N/A", "N/A"];
+  });
+});
+let currentWeekIndex = 0;
+const dayOrder = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+const dayNames = {Monday:'Hétfő',Tuesday:'Kedd',Wednesday:'Szerda',Thursday:'Csütörtök',Friday:'Péntek'};
+function todayISO() {
+  const now = new Date();
+  return `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
+}
+function findCurrentWeek() {
+  const today = todayISO();
+  const index = menuData.weeks.findIndex(week => {
+    const start = new Date(week.weekStart + 'T12:00:00');
+    const end = new Date(start);
+    end.setDate(end.getDate() + 6);
+    const endISO = `${end.getFullYear()}-${String(end.getMonth()+1).padStart(2,'0')}-${String(end.getDate()).padStart(2,'0')}`;
+    return today >= week.weekStart && today <= endISO;
+  });
+  return index === -1 ? 0 : index;
+}
+function escapeHTML(value) {
+  const element = document.createElement('span');
+  element.textContent = String(value);
+  return element.innerHTML;
+}
+function renderMenu() {
+  const week = menuData.weeks[currentWeekIndex];
+  document.getElementById('menuWeekLabel').textContent = week.weekLabel;
+  const today = todayISO();
+  let html = '';
+  dayOrder.forEach(day => {
+    const dayData = week.days[day];
+    if (!dayData) return;
+    const isToday = dayData.isoDate === today;
+    html += `
+      <div class="menu-day-card ${isToday ? 'today-highlight' : ''}">
+        <div class="menu-day-header">
+          <div class="menu-day-name">${dayNames[day]}${isToday ? ' <span style="color:var(--accent);font-size:.75rem">● MA</span>' : ''}</div>
+          <div class="menu-day-date">${escapeHTML(dayData.date)}</div>
+        </div>
+        <div class="menu-option menu-a">
+          <div class="menu-label">🅰️ A menü</div>
+          <ul class="menu-items">${dayData.menuA.map(item => `<li>${escapeHTML(item)}</li>`).join('')}</ul>
+        </div>
+        <div class="menu-option menu-b">
+          <div class="menu-label">🅱️ B menü</div>
+          <ul class="menu-items">${dayData.menuB.map(item => `<li>${escapeHTML(item)}</li>`).join('')}</ul>
+        </div>
+      </div>`;
+  });
+  document.getElementById('menuGrid').innerHTML = html;
+  document.getElementById('menuPrevWeek').disabled = currentWeekIndex === 0;
+  document.getElementById('menuNextWeek').disabled = currentWeekIndex === menuData.weeks.length-1;
+}
+document.getElementById('menuPrevWeek').addEventListener('click', () => {
+  if (currentWeekIndex > 0) { currentWeekIndex--; renderMenu(); }
+});
+document.getElementById('menuNextWeek').addEventListener('click', () => {
+  if (currentWeekIndex < menuData.weeks.length-1) { currentWeekIndex++; renderMenu(); }
+});
+currentWeekIndex = findCurrentWeek();
+renderMenu();
+
 </script></body></html>
