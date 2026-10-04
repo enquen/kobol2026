@@ -3175,14 +3175,38 @@ function todayISO() {
   return `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
 }
 function findCurrentWeek() {
-  const today = todayISO();
+  const targetDate = new Date();
+  targetDate.setHours(12, 0, 0, 0);
+
+  const day = targetDate.getDay();
+
+  // Saturday → upcoming Monday
+  // Sunday   → upcoming Monday
+  if (day === 6) {
+    targetDate.setDate(targetDate.getDate() + 2);
+  } else if (day === 0) {
+    targetDate.setDate(targetDate.getDate() + 1);
+  }
+
+  const targetISO =
+    `${targetDate.getFullYear()}-` +
+    `${String(targetDate.getMonth() + 1).padStart(2, '0')}-` +
+    `${String(targetDate.getDate()).padStart(2, '0')}`;
+
   const index = menuData.weeks.findIndex(week => {
     const start = new Date(week.weekStart + 'T12:00:00');
     const end = new Date(start);
-    end.setDate(end.getDate() + 6);
-    const endISO = `${end.getFullYear()}-${String(end.getMonth()+1).padStart(2,'0')}-${String(end.getDate()).padStart(2,'0')}`;
-    return today >= week.weekStart && today <= endISO;
+    end.setDate(end.getDate() + 4);
+
+    const endISO =
+      `${end.getFullYear()}-` +
+      `${String(end.getMonth() + 1).padStart(2, '0')}-` +
+      `${String(end.getDate()).padStart(2, '0')}`;
+
+    return targetISO >= week.weekStart && targetISO <= endISO;
   });
+
+  // Preserve your existing fallback if the target week is missing.
   return index === -1 ? 0 : index;
 }
 function escapeHTML(value) {
