@@ -1,0 +1,11 @@
+text
+{
+  "name": "kobol2026",
+  "compatibility_date": "2026-10-22",
+  "main": "worker.js",
+  "assets": {
+    "directory": "./",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  }
+}
